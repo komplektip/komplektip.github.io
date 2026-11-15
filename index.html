@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Комплект ИП — шаблоны для владельцев ПВЗ WB, Ozon и Яндекс Маркета</title>
+<meta name="description" content="Готовый комплект документов для оформления оператора ПВЗ Wildberries, Ozon или Яндекс Маркета: трудовой договор, должностная инструкция, матответственность, гайды. Без штрафов и путаницы.">
+<style>
+:root{
+  --bg:#0d1226; --bg2:#141b38; --card:#1a2244; --line:#2a3560;
+  --text:#eef1fa; --muted:#9aa6c9;
+  --accent:#ff9a3c; --accent2:#ffb877;
+  --green:#4ade80; --purple:#8b7cf6;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Segoe UI',Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
+h2{font-size:1.7em;margin-bottom:18px}
+section{padding:56px 0}
+.badge{display:inline-block;background:rgba(255,154,60,.15);color:var(--accent);border:1px solid rgba(255,154,60,.4);padding:5px 14px;border-radius:20px;font-size:.85em;margin-bottom:14px;font-weight:600}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--accent),#ff7a1a);color:#fff;padding:16px 34px;border-radius:12px;font-size:1.05em;font-weight:700;text-decoration:none;transition:.2s;box-shadow:0 8px 24px rgba(255,122,26,.35)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 30px rgba(255,122,26,.5)}
+.btn-small{padding:10px 22px;font-size:.9em}
+.link-accent{color:var(--accent);text-decoration:none}
+.link-accent:hover{text-decoration:underline}
+/* header */
+header{position:sticky;top:0;background:rgba(13,18,38,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50;padding:12px 0}
+.header-in{display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:1.1em}
+.logo span{color:var(--accent)}
+/* hero */
+.hero{background:radial-gradient(ellipse at top, #1c2650 0%, var(--bg) 60%);padding:70px 0 60px;text-align:center}
+.hero h1{font-size:2.1em;line-height:1.25;margin-bottom:16px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.sub{color:var(--muted);font-size:1.1em;max-width:640px;margin:0 auto 26px}
+.marketplaces{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:28px}
+.mp{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 18px;font-weight:700;font-size:.95em}
+.mp.wb{color:#cb11ab}.mp.oz{color:#005bff}.mp.ya{color:var(--accent2)}
+.old-price{text-decoration:line-through;color:var(--muted);margin-right:10px;font-size:.95em}
+/* cards */
+.grid{display:grid;gap:16px}
+.grid-2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+.grid-3{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card h3{margin-bottom:8px;font-size:1.08em}
+.card p{color:var(--muted);font-size:.95em}
+.tag{display:inline-block;font-size:.72em;font-weight:700;padding:2px 10px;border-radius:6px;margin-left:6px;vertical-align:middle}
+.tag.doc{background:rgba(139,124,246,.2);color:var(--purple)}
+.tag.guide{background:rgba(74,222,128,.15);color:var(--green)}
+.num{display:inline-block;width:34px;height:34px;line-height:34px;text-align:center;background:rgba(255,154,60,.15);color:var(--accent);border-radius:50%;font-weight:800;margin-bottom:10px}
+/* pains */
+.pain{display:flex;gap:14px;align-items:flex-start;padding:16px 0;border-bottom:1px dashed var(--line)}
+.pain:last-child{border-bottom:none}
+.pain .ico{font-size:1.5em}
+.pain strong{display:block;margin-bottom:2px}
+.pain p{color:var(--muted);font-size:.95em}
+/* table */
+table{width:100%;border-collapse:collapse;font-size:.95em}
+th,td{padding:13px 14px;text-align:left;border-bottom:1px solid var(--line)}
+th{color:var(--muted);font-weight:600;font-size:.85em;text-transform:uppercase;letter-spacing:.5px}
+td:first-child{color:var(--muted)}
+.you{color:var(--accent);font-weight:700}
+.table-card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+/* steps */
+.step{display:flex;gap:16px;align-items:flex-start;margin-bottom:20px}
+.step .n{flex:none;width:40px;height:40px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#ff7a1a);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:1.1em}
+/* about */
+.about-card{display:flex;gap:20px;align-items:center;background:linear-gradient(135deg,var(--card),var(--bg2));border:1px solid var(--line);border-radius:16px;padding:26px}
+.avatar{flex:none;width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--purple));display:flex;align-items:center;justify-content:center;font-size:1.8em}
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:10px;overflow:hidden}
+summary{padding:16px 20px;cursor:pointer;font-weight:600;list-style:none;position:relative;padding-right:44px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';position:absolute;right:18px;top:50%;transform:translateY(-50%);color:var(--accent);font-size:1.4em;font-weight:400}
+details[open] summary::after{content:'−'}
+details p{padding:0 20px 16px;color:var(--muted);font-size:.95em}
+/* price */
+.price-block{background:linear-gradient(135deg,#1c2650,var(--bg2));border:1px solid var(--line);border-radius:18px;text-align:center;padding:44px 24px}
+.price{font-size:2.4em;font-weight:800;color:var(--accent);margin:10px 0}
+.bonuses{list-style:none;margin:22px 0}
+.bonuses li{padding:7px 0;color:var(--muted)}
+.bonuses li::before{content:'✓ ';color:var(--green);font-weight:700}
+/* footer */
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:.9em}
+footer a{color:var(--accent2);text-decoration:none}
+footer a:hover{text-decoration:underline}
+.small{font-size:.82em;color:var(--muted);margin-top:14px}
+.note{background:rgba(139,124,246,.1);border:1px dashed var(--purple);border-radius:12px;padding:16px 20px;color:var(--muted);font-size:.92em;margin-top:18px}
+@media(max-width:640px){
+  .hero h1{font-size:1.55em}
+  h2{font-size:1.4em}
+  section{padding:40px 0}
+  .about-card{flex-direction:column;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap header-in">
+    <div class="logo">Комплект<span>ИП</span></div>
+    <a href="#price" class="btn btn-small">Купить · 1490 ₽</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="badge">Для владельцев пунктов выдачи</span>
+    <div class="marketplaces">
+      <span class="mp wb">Wildberries</span>
+      <span class="mp oz">Ozon</span>
+      <span class="mp ya">Яндекс Маркет</span>
+    </div>
+    <h1>Нанимаете оператора в ПВЗ? Не попадите на штраф <em>5 000 ₽</em> и путаницу с выплатами</h1>
+    <p class="sub">Готовый комплект для владельцев ПВЗ: 5 шаблонов документов + гайд «Оформление за 3 дня» + финансовый гайд. Подставили данные оператора — распечатали. Работает в первый же день.</p>
+    <a href="#price" class="btn">Получить комплект за 1490 ₽</a>
+    <p class="small" style="margin-top:14px"><span class="old-price">2990 ₽</span> цена на старте · чек прилагается</p>
+  </div>
+</section>
+
+<section id="pains">
+  <div class="wrap">
+    <h2>Знакомые ситуации?</h2>
+    <div class="grid grid-2">
+      <div class="pain"><div class="ico">⏰</div><div><strong>Оператор нужен «на вчера»</strong><p>Смену закрывать некому, посылки копятся, а оформление откладывается «на потом» — и именно в этот момент трудовая инспекция видит нарушение.</p></div></div>
+      <div class="pain"><div class="ico">🔄</div><div><strong>Текучка каждые 2–3 месяца</strong><p>Операторы меняются постоянно, и каждый раз всё заново: договор, согласие на ПД, ознакомление. Без системы это съедает вечера и создаёт ошибки.</p></div></div>
+      <div class="pain"><div class="ico">📦</div><div><strong>Товар и касса — на операторе без договора</strong><p>Недостача на WB, «потерянное» отправление в Яндексе, ошибка при выдаче на Ozon — без договора о матответственности взыскать больше среднего месячного заработка не получится.</p></div></div>
+      <div class="pain"><div class="ico">💳</div><div><strong>Зарплата с личной карты</strong><p>Платите оператору со своей личной карты «по-простому» — и получаете вопросы от банка по 115-ФЗ и путаницу в расходах ИП.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="inside" style="background:var(--bg2)">
+  <div class="wrap">
+    <h2>Что внутри комплекта</h2>
+    <div class="grid grid-2">
+      <div class="card"><h3>Трудовой договор — сменный график <span class="tag doc">DOCX</span></h3><p>Основной вариант для ПВЗ: график 2/2, посменная оплата. Учитывает обязательные условия ст. 57 ТК РФ.</p></div>
+      <div class="card"><h3>Трудовой договор — график 5/2 <span class="tag doc">DOCX</span></h3><p>Запасной вариант: если оператор работает в стандартном режиме с окладом.</p></div>
+      <div class="card"><h3>Должностная инструкция оператора ПВЗ <span class="tag doc">DOCX</span></h3><p>Не абстрактная, а под реальные задачи пункта: приём и выдача отправлений, работа с кассой, сканирование, отчётность.</p></div>
+      <div class="card"><h3>Согласие на обработку персональных данных <span class="tag doc">DOCX</span></h3><p>По 152-ФЗ, без лишних полей — но так, чтобы инспекция не нашла, к чему придраться.</p></div>
+      <div class="card"><h3>Заявление на перечисление зарплаты <span class="tag doc">DOCX</span></h3><p>Чтобы оператор сам правильно указал реквизиты, а вы не собирали их по переписке.</p></div>
+      <div class="card"><h3>Договор о матответственности <span class="tag doc">DOCX</span></h3><p>По новой типовой форме Минтруда (приказ № 251н). Акцент на товар и кассу пункта выдачи.</p></div>
+      <div class="card"><h3>Гайд «Оформление за 3 дня» <span class="tag guide">PDF</span></h3><p>Пошагово: день 1 — допуск и ознакомление под подпись, что запросить у работника, что подготовить, куда что сдать.</p></div>
+      <div class="card"><h3>Гайд «Финансы без рисков» <span class="tag guide">PDF</span></h3><p>Как платить зарплату с расчётного счёта, почему личная карта — риск, что проверяет банк по 115-ФЗ, как разделять личные и бизнес-расходы.</p></div>
+    </div>
+    <div class="note">🎁 <strong>Бонус для покупателей:</strong> разбор одного вашего документа — присылаете заполненный договор или черновик, я проверяю и даю рекомендации. Действует 30 дней с покупки.</div>
+  </div>
+</section>
+
+<section id="compare">
+  <div class="wrap">
+    <h2>Почему не конструктор договоров</h2>
+    <div class="table-card">
+      <table>
+        <tr><th></th><th>Конструктор</th><th class="you">Комплект ИП</th></tr>
+        <tr><td>Подход</td><td>Выбираешь 20 галочек и получаешь шаблон</td><td class="you">Готовые сценарии под реальность ПВЗ</td></tr>
+        <tr><td>Стоимость</td><td>390 ₽ за каждый документ × 5–6 = уже дороже</td><td class="you">1490 ₽ за весь комплект сразу</td></tr>
+        <tr><td>Что дальше</td><td>Только документ — дальше сам</td><td class="you">Маршрут «оформление за 3 дня» + финансовый гайд</td></tr>
+        <tr><td>Выплаты</td><td>Ни слова про карты и 115-ФЗ</td><td class="you">Отдельный раздел про зарплату и риски</td></tr>
+        <tr><td>Поддержка</td><td>ИИ-чат вместо человека</td><td class="you">Живой разбор одного документа в подарок</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="how" style="background:var(--bg2)">
+  <div class="wrap">
+    <h2>Как это работает</h2>
+    <div class="step"><div class="n">1</div><div><strong>Оплата и скачивание</strong><p>После оплаты приходит ссылка на архив. Скачивается и на компьютере, и с телефона.</p></div></div>
+    <div class="step"><div class="n">2</div><div><strong>Открываете «НАЧНИ ОТСЮДА»</strong><p>Внутри — порядок действий: шпаргалка «за 3 дня», затем шаблоны и гайды.</p></div></div>
+    <div class="step"><div class="n">3</div><div><strong>Подставляете данные — и оператор оформлен</strong><p>Шаблоны открываются в Word или Google Docs. Подставили ФИО, ставку и график — распечатали в двух экземплярах.</p></div></div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <h2>Кто это сделал</h2>
+    <div class="about-card">
+      <div class="avatar">👤</div>
+      <div>
+        <p>Я — действующий ИП, оформляю реальных сотрудников по этим же шаблонам: сменные графики, матответственность, заявления на выплаты — всё отработано на практике, а не скопировано из интернета.</p>
+        <p style="margin-top:10px">В комплекте нет теории «на все случаи» — только то, что реально нужно владельцу пункта выдачи в первый год работы.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq" style="background:var(--bg2)">
+  <div class="wrap">
+    <h2>Частые вопросы</h2>
+    <details open><summary>Подходит ли комплект, если у меня ПВЗ Яндекс Маркета?</summary><p>Да. Шаблоны универсальны для оператора пункта выдачи любого маркетплейса — WB, Ozon или Яндекс. Договор о матответственности составлен с акцентом на товар и кассу, что актуально для всех трёх площадок.</p></details>
+    <details><summary>А если оператор уже работает у меня без документов?</summary><p>Лучше оформить сейчас, чем ждать проверку. В шпаргалке «Оформление за 3 дня» есть раздел про «допуск с опозданием»: как оформить задним числом с минимальными рисками и что исправить первым.</p></details>
+    <details><summary>Шаблоны не устареют через полгода?</summary><p>Комплект актуален на 2026 год, включая новую типовую форму матответственности (приказ Минтруда № 251н). Покупателям доступно обновление файлов, если меняются законы — об этом сообщаю в канале для клиентов.</p></details>
+    <details><summary>У меня не ИП, а самозанятость. Подойдёт?</summary><p>Трудовой договор с сотрудником для самозанятого — отдельная и рискованная история (НПД не предназначен для найма). Комплект рассчитан на ИП; для самозанятых сначала стоит разобраться со статусом — об этом коротко написано в гайде.</p></details>
+    <details><summary>Как получить разбор документа (бонус)?</summary><p>После покупки пишете мне в личку и присылаете один заполненный документ — например, договор с первым оператором. В течение 30 дней с покупки я проверю его и пришлю рекомендации по правкам.</p></details>
+  </div>
+</section>
+
+<section id="price">
+  <div class="wrap">
+    <div class="price-block">
+      <span class="badge">Стартовая цена</span>
+      <h2>Комплект для владельца ПВЗ</h2>
+      <div class="price"><span class="old-price" style="font-size:.5em;color:var(--muted)">2990 ₽</span> 1490 ₽</div>
+      <ul class="bonuses">
+        <li>5 шаблонов документов (DOCX) под ПВЗ</li>
+        <li>Гайд «Оформление за 3 дня» (PDF)</li>
+        <li>Гайд «Финансы без рисков» (PDF)</li>
+        <li>Бонус: разбор одного вашего документа</li>
+        <li>Обновления при изменении законов</li>
+      </ul>
+      <a href="[ССЫЛКА НА ОПЛАТУ]" class="btn">Получить комплект за 1490 ₽</a>
+      <p class="small">Оплачивая, вы соглашаетесь с <a href="#offer" class="link-accent">условиями использования</a> и <a href="#policy" class="link-accent">политикой конфиденциальности</a></p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p><strong>Комплект ИП: без штрафов и путаницы</strong> — готовые шаблоны для оформления сотрудников ПВЗ.</p>
+    <p style="margin-top:10px">Вопросы и поддержка: Telegram <a href="https://t.me/[@ваш_аккаунт]">[@ваш_аккаунт]</a> · почта <a href="mailto:[email]">[email]</a></p>
+
+    <h3 id="offer" style="margin-top:26px;color:var(--text)">Условия использования (оферта)</h3>
+    <p>1. Комплект предоставляется для личного использования в вашей предпринимательской деятельности.</p>
+    <p>2. Запрещается передавать файлы третьим лицам, публиковать их в открытых источниках, перепродавать или использовать для создания собственных продуктов.</p>
+    <p>3. Допускается заполнять шаблоны данными ваших сотрудников, адаптировать формулировки под свою ситуацию, печатать любое количество копий для нужд вашего бизнеса.</p>
+    <p>4. Комплект актуален на дату покупки. Обновления при изменении законодательства доступны покупателям.</p>
+    <p>5. Комплект — практический инструмент, а не индивидуальная юридическая консультация.</p>
+
+    <h3 id="policy" style="margin-top:26px;color:var(--text)">Политика конфиденциальности</h3>
+    <p>Для оформления покупки мы собираем минимально необходимые данные: имя, контакт (email или Telegram) и сведения об оплате. Данные используются исключительно для выдачи заказа, формирования чека и связи с покупателем. Данные не передаются третьим лицам, кроме платёжных сервисов, обрабатывающих оплату. Вы можете запросить удаление своих данных, написав на [email].</p>
+
+    <p class="small">© 2026 [Имя/бренд] · ИП [ФИО], ИНН [номер]. Все права на материалы комплекта защищены.</p>
+  </div>
+</footer>
+
+</body>
+</html>
