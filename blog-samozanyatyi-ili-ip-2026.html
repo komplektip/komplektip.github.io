@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Самозанятый или ИП для ПВЗ: считаем на цифрах 2026 | КомплектИП</title>
+<meta name="description" content="Почему владелец пункта выдачи не может быть самозанятым, сколько экономит самозанятый оператор по ГПХ и какие риски переквалификации действуют в 2026 году. Считаем на цифрах.">
+<style>
+:root{
+  --bg:#0d1420; --bg2:#111a2b; --card:#141d30; --card2:#182338;
+  --line:#243150; --text:#e8edf5; --muted:#9aa8bf; --accent:#ff9f2e;
+  --accent2:#ffc46b; --green:#4ade80; --red:#f87171; --link:#c4a5ff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.65;font-size:17px}
+a{color:var(--link)}
+.wrap{max-width:820px;margin:0 auto;padding:0 20px}
+/* шапка */
+.top{position:sticky;top:0;z-index:50;background:rgba(13,20,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top-in{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;font-size:22px;letter-spacing:-.3px;color:#fff;text-decoration:none}
+.logo span{color:var(--accent)}
+.btn{display:inline-block;background:var(--accent);color:#141d30;font-weight:700;text-decoration:none;padding:12px 22px;border-radius:10px;transition:.15s}
+.btn:hover{background:var(--accent2)}
+.btn-sm{padding:10px 18px;font-size:15px}
+/* hero */
+.hero{padding:48px 0 8px}
+.crumb{font-size:15px;margin-bottom:22px}
+.crumb a{color:var(--link);text-decoration:none}
+.crumb .sep{color:var(--muted)}
+.meta{color:var(--muted);font-size:14px;margin-bottom:16px}
+h1{font-size:clamp(28px,5vw,40px);line-height:1.2;letter-spacing:-.5px;margin-bottom:18px}
+.lead{font-size:19px;color:var(--muted);margin-bottom:26px}
+.lead b,.lead strong{color:var(--text)}
+/* карточки */
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px 26px;margin:22px 0}
+.card h3{margin-bottom:10px}
+.toc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 26px;margin:26px 0}
+.toc b{display:block;margin-bottom:10px;font-size:16px}
+.toc ol{margin-left:20px;color:var(--muted)}
+.toc a{color:var(--muted);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+section{padding:34px 0 6px}
+h2{font-size:clamp(22px,4vw,28px);line-height:1.25;letter-spacing:-.3px;margin-bottom:16px}
+h3{font-size:19px;margin:24px 0 10px}
+p{margin-bottom:14px;color:#cdd6e4}
+li{margin-bottom:8px;color:#cdd6e4}
+ul,ol{margin:0 0 14px 22px}
+strong{color:#fff}
+.num{color:var(--accent);font-weight:700}
+/* фигуры-факты */
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:22px 0}
+.fact{background:var(--card2);border:1px solid var(--line);border-radius:12px;padding:18px 20px}
+.fact .big{font-size:26px;font-weight:800;color:var(--accent);letter-spacing:-.5px}
+.fact .lbl{font-size:14px;color:var(--muted);margin-top:4px}
+/* таблицы */
+.tbl-scroll{overflow-x:auto;margin:20px 0;border:1px solid var(--line);border-radius:12px}
+table{width:100%;border-collapse:collapse;min-width:560px;font-size:15px}
+th{background:var(--card2);text-align:left;padding:12px 14px;color:var(--accent);font-size:13px;text-transform:uppercase;letter-spacing:.4px;border-bottom:1px solid var(--line)}
+td{padding:12px 14px;border-bottom:1px solid var(--line);color:#cdd6e4;vertical-align:top}
+tr:last-child td{border-bottom:none}
+td b{color:#fff}
+/* шаги */
+.steps{counter-reset:step;margin:22px 0}
+.step{display:flex;gap:16px;padding:14px 0;border-bottom:1px dashed var(--line)}
+.step:last-child{border-bottom:none}
+.step::before{counter-increment:step;content:counter(step);flex:0 0 34px;height:34px;border-radius:50%;background:var(--accent);color:#141d30;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:16px}
+.step .t{font-weight:700;color:#fff}
+.step .d{color:var(--muted);font-size:15px}
+/* врезки */
+.note{background:rgba(255,159,46,.08);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;padding:14px 18px;margin:20px 0;font-size:15.5px}
+.note b{color:var(--accent)}
+.warn{background:rgba(248,113,113,.08);border-left:3px solid var(--red);border-radius:0 10px 10px 0;padding:14px 18px;margin:20px 0;font-size:15.5px}
+.warn b{color:var(--red)}
+/* faq */
+details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:12px 0;overflow:hidden}
+summary{padding:16px 20px;cursor:pointer;font-weight:700;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:'+';color:var(--accent);font-size:22px;font-weight:400;flex:0 0 auto}
+details[open] summary::after{content:'–'}
+details .a{padding:0 20px 18px;color:#cdd6e4}
+/* CTA */
+.cta{background:linear-gradient(135deg,rgba(255,159,46,.16),rgba(255,159,46,.05));border:1px solid rgba(255,159,46,.4);border-radius:16px;padding:30px 28px;margin:36px 0;text-align:center}
+.cta h2{margin-bottom:10px}
+.cta p{color:var(--muted);max-width:600px;margin:0 auto 20px}
+.disc{font-size:13.5px;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:10px;padding:14px 18px;margin:28px 0}
+/* источники */
+.src{margin:30px 0 10px}
+.src h2{font-size:20px}
+.src ol{margin-left:22px;font-size:14.5px;color:var(--muted)}
+.src li{margin-bottom:9px}
+.src a{color:var(--link);word-break:break-all}
+footer{border-top:1px solid var(--line);margin-top:40px;padding:26px 0;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:600px){body{font-size:16px}.card,.toc{padding:18px}}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <a class="logo" href="index.html">Комплект<span>ИП</span></a>
+    <a class="btn btn-sm" href="https://payform.ru/b3d3kOy/">Купить · 1490 ₽</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <p class="crumb"><a href="index.html">← На главную</a><span class="sep"> · </span><a href="blog.html">Блог</a></p>
+    <p class="meta">Обновлено: ноябрь 2026 · 10 минут чтения</p>
+    <h1>Самозанятый или ИП для пункта выдачи: считаем на цифрах 2026</h1>
+    <p class="lead">Начнём с неудобного факта: <b>владелец ПВЗ в принципе не может быть самозанятым</b> — маркетплейсы работают с ИП и ООО по агентскому договору, а НПД такую деятельность запрещает. Но самозанятость всё равно может сэкономить вам сотни тысяч рублей в год — если речь об <b>операторе</b>. Разбираем обе роли на реальных цифрах.</p>
+  </div>
+
+  <div class="toc">
+    <b>Содержание</b>
+    <ol>
+      <li><a href="#s1">Почему владельцу ПВЗ нельзя быть самозанятым</a></li>
+      <li><a href="#s2">Какие варианты есть на самом деле</a></li>
+      <li><a href="#s3">Оператор-самозанятый: экономим на цифрах</a></li>
+      <li><a href="#s4">Слабое место: работа «в конверте»</a></li>
+      <li><a href="#s5">Риски переквалификации в 2026 году</a></li>
+      <li><a href="#s6">Итог: пять шагов</a></li>
+      <li><a href="#faq">Частые вопросы</a></li>
+    </ol>
+  </div>
+
+  <section id="s1">
+    <h2>Почему владельцу ПВЗ нельзя быть самозанятым</h2>
+    <p>Самозанятость (налог на профессиональный доход, НПД) — режим для тех, кто продаёт <strong>результат своего труда</strong> без найма сотрудников и без посредничества. А пункт выдачи — это классическое посредничество: вы принимаете товар от маркетплейса, храните его, выдаёте покупателям, обрабатываете возвраты. Комиссия за это — доход от агентского договора.</p>
+    <p>Налоговый кодекс прямо исключает такие доходы из НПД: по <span class="num">ст. 422 НК РФ</span> не признаются объектом налогообложения доходы от переданных имущественных прав на товары, работы, услуги — то есть от агентских схем. Налоговая считает это занятием «с нанимателем или посредником».</p>
+    <p>Маркетплейсы и сами не примут самозанятого как владельца ПВЗ: Wildberries и Ozon заключают договор только с ИП или ООО. С 1 октября 2026 года закон о платформенной экономике (<span class="num">289-ФЗ</span>) дополнительно обязывает платформы проверять контрагентов через ЕГРЮЛ и ЕГРИП — обойти это становится ещё сложнее.</p>
+    <div class="warn"><b>Важно:</b> попытка оформить ПВЗ на самозанятость «через друга-ИП» или работать без регистрации — это не оптимизация, а нарушение. Штрафы по 5.27 КоАП и доначисления налоговой в 2026 году добираются с процентами и не гасятся уплаченным НПД.</div>
+  </section>
+
+  <section id="s2">
+    <h2>Какие варианты есть на самом деле</h2>
+    <p>Развилка в реальности выглядит так: владелец — всегда ИП или ООО, а вот операторов можно оформлять тремя способами.</p>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Роль</th><th>Статус</th><th>Документ</th><th>Налоги и взносы</th></tr></thead>
+      <tbody>
+        <tr><td><b>Владелец ПВЗ</b></td><td>ИП или ООО</td><td>Агентский договор с маркетплейсом</td><td>УСН, страховые взносы</td></tr>
+        <tr><td><b>Оператор (вариант А)</b></td><td>Работник</td><td>Трудовой договор</td><td>НДФЛ + взносы платит работодатель</td></tr>
+        <tr><td><b>Оператор (вариант Б)</b></td><td>Самозанятый</td><td>ГПХ (договор оказания услуг)</td><td>НПД 4–6%, взносы — по желанию</td></tr>
+        <tr><td><b>Оператор (вариант В)</b></td><td>Без оформления</td><td>«Конверт»</td><td>Ничего — и максимальный риск</td></tr>
+      </tbody>
+    </table></div>
+    <p>Ниже — сравнение вариантов А, Б и В в деньгах.</p>
+  </section>
+
+  <section id="s3">
+    <h2>Оператор-самозанятый: экономим на цифрах</h2>
+    <p>Возьмём типового оператора с зарплатой <span class="num">70 000 ₽ на руки</span> и посчитаем годовую нагрузку на владельца ПВЗ. Цифры модельные — покажите их своему бухгалтеру, но порядок величин он подтвердит.</p>
+    <div class="tbl-scroll"><table>
+      <thead><tr><th>Статья расходов в год</th><th>Трудовой договор</th><th>Самозанятый по ГПХ</th></tr></thead>
+      <tbody>
+        <tr><td>Сумма на руки сотруднику</td><td>840 000 ₽</td><td>840 000 ₽</td></tr>
+        <tr><td>НДФЛ 13% (удерживает работодатель)</td><td>~125 200 ₽</td><td>—</td></tr>
+        <tr><td>Страховые взносы (ОПС + ОМС)</td><td>~207 500 ₽</td><td>—</td></tr>
+        <tr><td>НПД 6% (юрлицо как заказчик)</td><td>—</td><td>~53 700 ₽</td></tr>
+        <tr><td>Отпуск, больничные, кадровые издержки</td><td>зависит от графика</td><td>—</td></tr>
+        <tr><td><b>Итого нагрузка сверх зарплаты</b></td><td><b>~330 000–350 000 ₽</b></td><td><b>~53 700 ₽</b></td></tr>
+      </tbody>
+    </table></div>
+    <p>Разница — порядка <span class="num">280 000–293 000 ₽ в год на одного оператора</span>. На точке с двумя операторами это почти треть годовой прибыли небольшого ПВЗ.</p>
+    <div class="note"><b>Но есть условие:</b> ГПХ с самозанятым законен, только если оператор действительно работает как исполнитель — сам определяет график в рамках согласованных смен, использует свою технику, отвечает за результат. Подмена трудового договора ГПХ — это переквалификация со штрафами (см. ниже). Договор должен быть настоящим, а не «трудовым с другой обложкой».</div>
+  </section>
+
+  <section id="s4">
+    <h2>Слабое место: работа «в конверте»</h2>
+    <p>Четвёртый вариант — не оформлять никого. Формально расходы нулевые, фактически это самая дорогая схема из всех.</p>
+    <ul>
+      <li><strong>Оператор не связан ничем.</strong> Ушёл — не уволишь, потому что не нанимал. Не сдал смену — не оштрафуешь, потому что не по договору. Договор о матответственности при «конверте» не работает.</li>
+      <li><strong>Недостача ложится на владельца.</strong> Без оформленных документов взыскать недостачу с неоформленного оператора почти невозможно — ст. 243 ТК РФ требует трудового договора и договора о полной матответственности.</li>
+      <li><strong>Проверка превращает «экономию» в долг.</strong> Доначисление НДФЛ и взносов за весь период плюс штрафы по 5.27 КоАП: для ИП первичное нарушение — 5–10 тысяч за каждого работника, повторное — 30–40 тысяч.</li>
+      <li><strong>С 2025 года работает реестр недобросовестных работодателей Роструда</strong> — попадание туда бьёт по найму сильнее штрафа.</li>
+    </ul>
+    <p>«Конверт» выгоден только до первой жалобы оператора — а жалуются, как правило, в момент конфликта. Комплект документов дешевле даже одного такого инцидента.</p>
+  </section>
+
+  <section id="s5">
+    <h2>Риски переквалификации в 2026 году</h2>
+    <p>ФНС в 2026 году смотрит на «самозанятость» сотрудников всё пристальнее. Что изменилось:</p>
+    <ul>
+      <li><strong>Индикаторы риска ужесточились.</strong> Приказ Минтруда <span class="num">685н</span> с 10 января 2026 года снизил порог доли дохода самозанятого от одного заказчика: теперь тревожный сигнал — выше 75% (раньше было 90%). Все ваши операторы-самозанятые, очевидно, получают 100% дохода от вас.</li>
+      <li><strong>Верховный Суд закрыл лазейку с возвратом НПД.</strong> В определении от 03.02.2025 ВС указал: уплаченный самозанятым налог <em>не засчитывается</em> при доначислении НДФЛ и взносов при переквалификации. Экономия сгорает полностью.</li>
+      <li><strong>Ставка 20% сверх лимита.</strong> Если годовой доход самозанятого превысит 2,4 млн ₽, вся сумма сверх лимита облагается по 20% — это не про операторов ПВЗ, но проверьте, что ваши ГПХ-исполнители об этом знают.</li>
+      <li><strong>Публичный реестр нарушителей.</strong> С 1 января 2025 года Роструд ведёт открытый реестр недобросовестных работодателей — туда попадают и за повторные нарушения по оформлению.</li>
+    </ul>
+    <div class="note"><b>Как снизить риск:</b> честный ГПХ с реальной свободой исполнителя, договор услуг с конкретным результатом (не «выполнять обязанности оператора», а «выдача N заказов за смену по регламенту»), и не превращайте самозанятого в единственного «вечного» работника с жёстким графиком 5/2 — это главная ловушка переквалификации.</div>
+  </section>
+
+  <section id="s6">
+    <h2>Итог: пять шагов</h2>
+    <div class="steps">
+      <div class="step"><div><div class="t">Регистрируйтесь как ИП на УСН</div><div class="d">Для владельца ПВЗ это не выбор, а требование маркетплейса. ООО имеет смысл при нескольких точках и найме директора.</div></div></div>
+      <div class="step"><div><div class="t">Забудьте про самозанятость для себя</div><div class="d">Агентский договор с НПД несовместим — налоговая снимет режим и доначислит налоги.</div></div></div>
+      <div class="step"><div><div class="t">Считайте операторов</div><div class="d">ГПХ с самозанятым экономит до ~293 000 ₽ в год на человека — но только при честной свободе исполнителя и корректном договоре.</div></div></div>
+      <div class="step"><div><div class="t">Не экономьте на «конверте»</div><div class="d">Одна недостача или жалоба перекроет всю «сэкономленную» нагрузку с процентами.</div></div></div>
+      <div class="step"><div><div class="t">Держите комплект документов готовым</div><div class="d">Трудовые или ГПХ-договоры, согласие на ПДн, матответственность по форме 251н, должностная инструкция — чтобы проверка не застала вас врасплох.</div></div></div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2>Все документы — в одном комплекте</h2>
+    <p>Шесть готовых шаблонов для ПВЗ: трудовые договоры под оба графика, должностная инструкция, согласие на ПДн, заявление на перечисление зарплаты и новый договор о матответственности по форме 251н. Плюс два гайда и бонус-разбор.</p>
+    <a class="btn" href="https://payform.ru/b3d3kOy/">Купить комплект · 1490 ₽</a>
+  </div>
+
+  <section id="faq">
+    <h2>Частые вопросы</h2>
+    <details><summary>Можно ли открыть ПВЗ на самозанятого, если он не нанимает работников?</summary><div class="a">Нет. Ограничение не в работниках, а в характере дохода: комиссия по агентскому договору — посреднический доход, который не признаётся объектом НПД по ст. 422 НК РФ. Плюс сами маркетплейсы работают только с ИП и ООО.</div></details>
+    <details><summary>Все операторы на ГПХ — это точно законно?</summary><div class="a">Законно, если отношения реальные ГПХ: исполнитель сам управляет своим временем в рамках смен, отвечает за результат, не находится в подчинении как штатный сотрудник. Если фактически это работа по графику под руководством — налоговая переквалифицирует в трудовые отношения, а уплаченный НПД не вернётся.</div></details>
+    <details><summary>Что будет, если переквалифицируют ГПХ в трудовые отношения?</summary><div class="a">Доначислят НДФЛ и страховые взносы за весь период, добавят штрафы по ст. 5.27 КоАП (для ИП 5–10 тыс. за каждого работника при первом нарушении), включат в реестр недобросовестных работодателей. Уплаченный самозанятыми НПД при этом не засчитывается.</div></details>
+    <details><summary>УСН или НПД для владельца ПВЗ — а вдруг всё-таки можно?</summary><div class="a">Для владельца точки выбор между УСН и НПД не существует: агентская схема с маркетплейсом исключает НПД. Выбор между ИП и ООО — да, и при 2+ точках с наёмным директором ООО иногда удобнее, но стартовать почти всегда логичнее с ИП на УСН.</div></details>
+    <details><summary>Нужно ли платить взносы за оператора-самозанятого?</summary><div class="a">Обязательных взносов нет — самозанятый платит их добровольно, «за пенсию». Но учтите, что добровольные взносы заказчика не принимаются к вычету, а сам исполнитель решает сам. В договоре ГПХ это фиксировать не нужно.</div></details>
+  </section>
+
+  <div class="disc">Материал носит информационный характер и не является юридической или налоговой консультацией. Расчёты — модельные: перед решениями по оформлению сверьте актуальные ставки взносов с нормами НК РФ или проконсультируйтесь с бухгалтером.</div>
+
+  <div class="src">
+    <h2>Источники информации</h2>
+    <ol>
+      <li>Статья 422 НК РФ — доходы, не признаваемые объектом налогообложения по НПД: <a href="https://www.consultant.ru/document/cons_doc_LAW_107106/">consultant.ru</a></li>
+      <li>Федеральный закон от 27.11.2018 № 422-ФЗ «О проведении эксперимента по установлению специального налогового режима "Налог на профессиональный доход"»: <a href="https://www.consultant.ru/document/cons_doc_LAW_510992/">consultant.ru</a></li>
+      <li>Приказ Минтруда России № 685н — индикаторы риска по самозанятым, порог доли дохода с 10.01.2026 — 75% (сайт Минтруда): <a href="https://mintrud.gov.ru/">mintrud.gov.ru</a></li>
+      <li>Федеральный закон от 31.07.2025 № 289-ФЗ «Об основах государственного регулирования экономической деятельности в сфере платформенной экономики» (с 01.10.2026): <a href="https://www.consultant.ru/document/cons_doc_LAW_505378/">consultant.ru</a></li>
+      <li>Определение Верховного Суда РФ от 03.02.2025 — позиция о незачёте НПД при переквалификации в трудовые отношения: <a href="https://www.vsrf.ru/">vsrf.ru</a></li>
+      <li>Статья 5.27 КоАП РФ — нарушения трудового законодательства и размеров штрафов: <a href="https://www.consultant.ru/document/cons_doc_LAW_34661/">consultant.ru</a></li>
+      <li>Реестр недобросовестных работодателей Роструда (с 01.01.2025): <a href="https://rostrud.gov.ru/">rostrud.gov.ru</a></li>
+      <li>Статьи 430 НК РФ (фиксированные страховые взносы ИП) и 57, 243 ТК РФ (условия трудового договора, полная материальная ответственность): <a href="https://www.consultant.ru/document/cons_doc_LAW_28165/">consultant.ru</a></li>
+      <li>Федеральный закон от 22.05.2003 № 54-ФЗ о применении контрольно-кассовой техники: <a href="https://www.consultant.ru/document/cons_doc_LAW_42371/">consultant.ru</a></li>
+    </ol>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 КомплектИП — документы для владельцев ПВЗ</span>
+    <a href="blog.html">Все статьи блога</a>
+  </div>
+</footer>
+
+</body>
+</html>
