@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Проверка ПВЗ в 2026 году: какие документы смотрят и как подготовиться за один вечер</title>
+<style>
+  :root{
+    --bg:#0d1220; --bg2:#131a2c; --card:#161e33; --line:#25304d;
+    --text:#eef1f8; --muted:#9aa7c4; --accent:#ff9f2e; --accent2:#ffb95e;
+    --danger:#ff6b6b; --ok:#4ade80; --link:#a78bfa;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.7;font-size:17px}
+  a{color:var(--link);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:860px;margin:0 auto;padding:0 22px}
+  /* header */
+  header{position:sticky;top:0;background:rgba(13,18,32,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+  .head{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .logo{font-weight:800;font-size:20px;letter-spacing:.3px}
+  .logo span{color:var(--accent)}
+  .btn{display:inline-block;background:linear-gradient(135deg,#ffb347,#ff9f2e);color:#1a1206;font-weight:700;padding:11px 22px;border-radius:10px;white-space:nowrap}
+  .btn:hover{text-decoration:none;filter:brightness(1.06)}
+  /* hero */
+  .hero{padding:46px 0 10px}
+  .crumbs{font-size:15px;margin-bottom:22px}
+  .tag{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.6px;padding:5px 14px;border:1.5px solid var(--accent);color:var(--accent);border-radius:999px;margin-bottom:18px}
+  .meta{color:var(--muted);font-size:15px;margin:14px 0 6px}
+  h1{font-size:clamp(28px,4.6vw,40px);line-height:1.22;font-weight:800;margin:10px 0 6px}
+  .hl{color:var(--accent)}
+  .lead{color:var(--muted);font-size:18px;margin-top:18px}
+  /* sections */
+  section{padding:26px 0}
+  h2{font-size:26px;font-weight:800;margin:34px 0 16px;padding-top:10px;border-top:1px solid var(--line)}
+  h2:first-of-type{border-top:none}
+  h3{font-size:19px;margin:24px 0 10px}
+  p{margin:12px 0}
+  ul{margin:12px 0 12px 22px}
+  li{margin:7px 0}
+  strong{color:#fff}
+  /* toc */
+  .toc{background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:20px 24px;margin:26px 0}
+  .toc b{display:block;margin-bottom:8px}
+  .toc ol{margin-left:20px}
+  .toc a{color:var(--accent2)}
+  /* callout */
+  .callout{border-left:4px solid var(--accent);background:var(--bg2);border-radius:0 12px 12px 0;padding:16px 20px;margin:20px 0}
+  .callout.red{border-color:var(--danger)}
+  .callout b{color:#fff}
+  .callout p{margin:6px 0}
+  /* doc cards */
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px;margin:22px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+  .card .num{display:inline-block;background:rgba(255,159,46,.14);color:var(--accent);font-weight:800;font-size:13px;border-radius:8px;padding:3px 10px;margin-bottom:10px}
+  .card h3{font-size:17px;margin:0 0 8px}
+  .card p{font-size:14.5px;color:var(--muted);margin:0}
+  /* table */
+  .tblwrap{overflow-x:auto;margin:20px 0}
+  table{width:100%;border-collapse:collapse;font-size:15px;min-width:560px}
+  th{background:var(--bg2);color:var(--accent2);text-align:left;padding:12px 14px;border-bottom:2px solid var(--line)}
+  td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+  tr:last-child td{border-bottom:none}
+  .warn{color:var(--danger);font-weight:700;white-space:nowrap}
+  /* steps */
+  .steps{counter-reset:st;margin:22px 0}
+  .step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 18px 18px 64px;margin:12px 0}
+  .step::before{counter-increment:st;content:counter(st);position:absolute;left:18px;top:20px;width:32px;height:32px;border-radius:50%;background:var(--accent);color:#1a1206;font-weight:800;display:flex;align-items:center;justify-content:center}
+  .step h3{margin:0 0 6px;font-size:17px}
+  .step p{margin:0;font-size:15.5px;color:var(--muted)}
+  /* faq */
+  details{background:var(--card);border:1px solid var(--line);border-radius:12px;margin:10px 0;padding:0}
+  summary{cursor:pointer;font-weight:700;padding:16px 20px;list-style:none}
+  summary::before{content:"+ ";color:var(--accent)}
+  details[open] summary::before{content:"− "}
+  details p{padding:0 20px 16px;color:var(--muted)}
+  /* cta */
+  .cta{background:linear-gradient(135deg,rgba(255,159,46,.14),rgba(255,159,46,.04));border:1.5px solid var(--accent);border-radius:16px;padding:26px;text-align:center;margin:34px 0}
+  .cta p{color:var(--muted);margin:8px 0 18px}
+  footer{border-top:1px solid var(--line);margin-top:30px;padding:22px 0 40px;color:var(--muted);font-size:14px}
+  .src{font-size:13px;color:#6f7ea0;margin-top:18px}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap head">
+    <div class="logo">Комплект<span>ИП</span></div>
+    <a class="btn" href="https://payform.ru/b3d3kOy/">Купить · 1490 ₽</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="hero">
+    <div class="crumbs"><a href="index.html">← На главную</a> &nbsp;·&nbsp; <a href="blog.html">← Все статьи</a></div>
+    <span class="tag">БЛОГ</span>
+    <h1>Проверка ПВЗ в 2026 году: <span class="hl">какие документы смотрят</span> и как подготовиться за один вечер</h1>
+    <div class="meta">Обновлено: ноябрь 2026 · 9 минут чтения</div>
+    <p class="lead">В 2026 году пункты выдачи попали под двойной контроль: налоговая ищет неоформленных операторов, а с 1 октября 2026 года маркетплейсы по закону о платформенной экономике сами проверяют владельцев ПВЗ через госреестры. Разбираем, что запросят инспектор и площадка, какие штрафы грозят и что нужно подготовить заранее.</p>
+  </div>
+
+  <div class="toc">
+    <b>Содержание</b>
+    <ol>
+      <li><a href="#who">Кто и почему проверяет ПВЗ</a></li>
+      <li><a href="#docs">7 документов, которые смотрят в первую очередь</a></li>
+      <li><a href="#questions">Вопросы инспектора оператору</a></li>
+      <li><a href="#fines">Штрафы и доначисления: считаем в рублях</a></li>
+      <li><a href="#samozanyatye">Самозанятый оператор: почему это зона риска</a></li>
+      <li><a href="#plan">Как подготовиться за один вечер</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </div>
+
+  <section id="who">
+    <h2>Кто и почему проверяет ПВЗ</h2>
+    <p><strong>ФНС.</strong> Инспекции сопоставляют обороты пункта с отчётностью по работникам. Логика простая: пункт с 12-часовым режимом без выходных физически не может обслуживаться одним человеком — налоговики закладывают минимум двух сотрудников на смену. Если в 6-НДФЛ и расчёте по взносам штата нет или он занижен, а выручка растёт, это автоматически попадает под критерии риска. По данным ФНС, в 2026 году инспекции активно выявляют неформальную занятость именно в ПВЗ: работают межведомственные комиссии по закону № 565-ФЗ, владельцев вызывают на комиссии за неявку штрафуют.</p>
+    <p><strong>Роструд.</strong> С декабря 2025 по февраль 2026 года инспекторы проводили профилактические визиты на склады Wildberries, Ozon и «Яндекс Маркета» — искали людей, работающих без оформления. Следующая волна может дойти до пунктов выдачи: тема нелегальной занятости в маркетплейс-сегменте на контроле правительства.</p>
+    <p><strong>Маркетплейсы.</strong> С 1 октября 2026 года вступает в силу закон о платформенной экономике (№ 289-ФЗ от 31.07.2025): площадки обязаны проверять владельцев ПВЗ через ЕГРЮЛ/ЕГРИП и ФНС — сверять ФИО или наименование, ИНН, адрес, ОКВЭД. При расхождениях доступ к личному кабинету могут приостановить до устранения. Плюс ужесточается контроль маркировки: с 1 сентября 2026 года растут штрафы за непередачу данных в «Честный знак».</p>
+    <div class="callout"><p><b>Вывод:</b> проверка может прийти с трёх сторон — от государства, от трудинспекции и от самой площадки. Документы, которые закрывают первую, обычно закрывают и остальные, потому что маркетплейс запрашивает тот же пакет.</p></div>
+  </section>
+
+  <section id="docs">
+    <h2>7 документов, которые смотрят в первую очередь</h2>
+    <div class="cards">
+      <div class="card"><span class="num">1</span><h3>Трудовой договор</h3><p>Основание отношений. Без него любой разговор заканчивается штрафом по ч. 4 ст. 5.27 КоАП.</p></div>
+      <div class="card"><span class="num">2</span><h3>Приказ о приёме</h3><p>Фиксирует дату начала работы, должность и зарплату. Инспектор сверяет с договором.</p></div>
+      <div class="card"><span class="num">3</span><h3>Договор о матответственности</h3><p>Без него недостачу в ПВЗ взыскивать с оператора нельзя. Нужна новая типовая форма.</p></div>
+      <div class="card"><span class="num">4</span><h3>Согласие на обработку ПДн</h3><p>Требование 152-ФЗ: оператор работает с паспортными данными покупателей.</p></div>
+      <div class="card"><span class="num">5</span><h3>Заявление о перечислении зарплаты</h3><p>По ст. 136 ТК РФ работник сам выбирает банк — без его заявления платить «куда решили» нельзя.</p></div>
+      <div class="card"><span class="num">6</span><h3>Должностная инструкция</h3><p>Приём и выдача, касса, сканирование, отчётность. Ответ на вопрос «что входит в обязанности».</p></div>
+      <div class="card"><span class="num">7</span><h3>Лист ознакомления с правилами</h3><p>Правила внутреннего распорядка, охрана труда, инструктаж. Часто забывают — инспектор спрашивает первым.</p></div>
+    </div>
+    <div class="callout red"><p><b>Важно про матответственность:</b> с 1 сентября 2025 года действует новая типовая форма из приказа Минтруда № 251н от 16.04.2025 (действует до 01.09.2031). Если у вас старый шаблон — договор всё равно работает, но при споре инспектор или суд могут придраться к форме. Проще обновить сразу.</p></div>
+  </section>
+
+  <section id="questions">
+    <h2>Вопросы инспектора оператору</h2>
+    <p>Проверка обычно начинается не с бумаг, а с разговора. Что спрашивают у человека за стойкой:</p>
+    <ul>
+      <li>«Вы здесь работаете? С какого числа? Кто вам платит и как часто?»</li>
+      <li>«Есть ли у вас трудовой договор, видели ли вы приказ?»</li>
+      <li>«Какой у вас график? Кто подменяет в выходные?»</li>
+      <li>«Проводили ли вас по инструктажу? Где лист ознакомления?»</li>
+    </ul>
+    <p>Если оператор отвечает «я самозанятый, работаю когда хочу» — но приходит каждый день по графику и подчиняется владельцу, инспектор фиксирует признаки трудовых отношений. Дальше к делу подключается налоговая.</p>
+  </section>
+
+  <section id="fines">
+    <h2>Штрафы и доначисления: считаем в рублях</h2>
+    <div class="tblwrap">
+      <table>
+        <tr><th>Нарушение</th><th>Для ИП</th><th>Для ООО</th></tr>
+        <tr><td>Неоформленный работник, первично (ч. 4 ст. 5.27 КоАП)</td><td>5 000–10 000 ₽ <b>за каждого</b></td><td>50 000–100 000 ₽</td></tr>
+        <tr><td>Повторное нарушение (ч. 5 ст. 5.27 КоАП)</td><td>30 000–40 000 ₽</td><td>100 000–200 000 ₽</td></tr>
+        <tr><td>Доначисленный НДФЛ с «серых» выплат</td><td colspan="2">13–22% от всех сумм + пени</td></tr>
+        <tr><td>Страховые взносы за весь период</td><td colspan="2">свыше 30% от сумм выплат</td></tr>
+        <tr><td>Штраф за неуплату налогов (ст. 122 НК РФ)</td><td colspan="2">20% от недоимки, при повторном — 40%</td></tr>
+      </table>
+    </div>
+    <p>И это не всё: с 1 января 2025 года Роструд ведёт <strong>публичный реестр работодателей с нелегальной занятостью</strong> — туда попадают по вступившему в силу постановлению по ч. 4 ст. 5.27. Нахождение в реестре закрывает госзакупки и часть мер господдержки минимум на два года.</p>
+    <div class="callout"><p><b>Пример расчёта:</b> один оператор на 25 000 ₽ в месяц без договора за год — это около 39 000 ₽ НДФЛ и взносов, плюс штраф 20% и плюс административный штраф. Итого один неоформленный человек обходится дороже, чем полный комплект документов на всех.</p></div>
+  </section>
+
+  <section id="samozanyatye">
+    <h2>Самозанятый оператор: почему это зона риска</h2>
+    <p>Самая частая «схема» в ПВЗ — оформить оператора самозанятым и платить ему без взносов. Формально закон это не запрещает, но по сути пункт выдачи — худший кандидат на самозанятость: человек работает на вашей территории, по вашему графику, на вашем оборудовании, выполняет регулярную функцию, а не разовый заказ. Это классические признаки трудовых отношений, и налоговики считают такой формат уязвимым.</p>
+    <p>С 10 января 2026 года действуют новые индикаторы риска Минтруда (приказ № 685н от 08.12.2025): внимание привлекают компании, которые работают больше чем с 35 самозанятыми, каждый получает свыше 35 000 ₽ в месяц от одного заказчика, сотрудничает дольше трёх месяцев, и этот заказчик даёт 75% и более дохода (порог снизили с 90%). Для типового ПВЗ с двумя операторами формальные пороги не сработают, но общий тренд важен: контроль за подменой отношений усилился, а Верховный Суд в феврале 2025 года подтвердил, что НПД, уплаченный самозанятым, <strong>не засчитывается</strong> при доначислении НДФЛ и взносов — платить придётся полностью за свой счёт.</p>
+    <p>Отдельное жёсткое правило из 422-ФЗ: нельзя оформлять самозанятым людей, которые были вашими штатными сотрудниками <strong>менее двух лет назад</strong>. С 1 октября 2026 года это правило закреплено и в законе о платформенной экономике: площадки проверяют самозанятых партнёров, в том числе на отсутствие недавних трудовых отношений.</p>
+    <div class="callout red"><p><b>Безопасная альтернатива:</b> постоянного оператора — по трудовому договору (можно на неполный день), разовые подмены и инвентаризации — по гражданско-правовому договору с самозанятым с чётким результатом работы («провести инвентаризацию по акту», а не «работать на ПВЗ»).</p></div>
+  </section>
+
+  <section id="plan">
+    <h2>Как подготовиться за один вечер</h2>
+    <div class="steps">
+      <div class="step"><h3>Выпишите людей и даты</h3><p>Кто фактически работал в ПВЗ, с какого числа, сколько получал. Это определит объём «восстановления».</p></div>
+      <div class="step"><h3>Заполните шаблоны</h3><p>Трудовой договор, приказ, матответственность, согласие на ПДн, заявление о перечислении зарплаты — в комплекте это занимает 15–20 минут на человека.</p></div>
+      <div class="step"><h3>Подпишите «задним числом» правильно</h3><p>Даты в договорах — фактические даты начала работы. Не ставьте сегодняшнюю дату на договор «от прошлого месяца»: при проверке это хуже отсутствия договора.</p></div>
+      <div class="step"><h3>Отразите сотрудников в отчётности</h3><p>Подайте 6-НДФЛ и РСВ с фактическими выплатами. Если делали это не с начала — уточнёнки до того, как придёт требование, снижают штраф с 40% до 20% или до нуля.</p></div>
+      <div class="step"><h3>Соберите папку «на проверку»</h3><p>Договоры, приказы, инструкции, листы ознакомления, штатное расписание. Срок хранения кадровых документов — 50 лет, бумагу не выбрасывать.</p></div>
+      <div class="step"><h3>Проверьте карточку ПВЗ и реестры</h3><p>Актуальный ИНН, адрес, ОКВЭД в ЕГРИП — с 1 октября 2026 года маркетплейс сверяет их сам. Расхождение = риск отключения пункта.</p></div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <h2>FAQ</h2>
+    <details open><summary>А если я сам работаю в своём ПВЗ, без сотрудников?</summary><p>Для одного пункта с гибким графиком это допустимо. Риск появляется, когда пунктов два и больше, режим длинный и без выходных — налоговая не верит, что вы физически везде. В этом случае нужен хотя бы один оформленный помощник.</p></details>
+    <details><summary>Можно ли оформить оператора на 0,5 ставки?</summary><p>Да, трудовой договор на неполное время — легальный способ сократить расходы. Главное, чтобы график был реальным и совпадал с фактической работой человека.</p></details>
+    <details><summary>ГПХ с самозанятым на подмену — можно?</summary><p>Можно, если это разовая задача с измеримым результатом (инвентаризация, монтаж стеллажей, настройка кассы). Постоянная выдача заказов по графику через ГПХ — та же переквалификация, только с худшими последствиями.</p></details>
+    <details><summary>Что делать, если повестка на комиссию уже пришла?</summary><p>Не игнорировать: за неявку штраф. Придите с оформленными документами и уточнённой отчётностью — добровольное исправление до выявления нарушения заметно снижает санкции.</p></details>
+  </section>
+
+  <div class="cta">
+    <h2 style="border:none;margin:0">Комплект документов для ПВЗ</h2>
+    <p>6 шаблонов (DOCX) + 2 гайда: «Оформление за 3 дня» и «Финансы без рисков». Подставили данные оператора — распечатали. Работает в первый же день.</p>
+    <a class="btn" href="https://payform.ru/b3d3kOy/">Получить комплект за 1490 ₽</a>
+    <p style="margin-top:12px;font-size:14px">Одна цена, без подписок и доплат · чек прилагается</p>
+  </div>
+
+  <footer>
+    <p>Материал носит информационный характер и не является юридической консультацией. Перед решениями по оформлению сотрудников сверяйтесь с действующими редакциями НК РФ, КоАП РФ и ТК РФ.</p>
+    <p class="src">Источники: ст. 5.27 КоАП РФ; приказ Минтруда № 251н от 16.04.2025; приказ Минтруда № 685н от 08.12.2025; 422-ФЗ ст. 6; 289-ФЗ от 31.07.2025; разъяснения ФНС и Роструда, 2026.</p>
+    <p>© КомплектИП · komplektip.ru</p>
+  </footer>
+</div>
+
+</body>
+</html>
