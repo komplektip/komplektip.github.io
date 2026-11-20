@@ -242,5 +242,13 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
   </div>
 </footer>
 
+<script>
+document.addEventListener('click', function(e) {
+  var btn = e.target.closest('a.btn, a.header-btn, a.card-link');
+  if (btn && typeof ym === 'function') {
+    ym(114339383, 'reachGoal', 'btn_click');
+  }
+});
+</script>
 </body>
 </html>
