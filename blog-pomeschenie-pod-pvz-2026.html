@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Помещение под ПВЗ: требования, аренда и чек-лист осмотра 2026 — КомплектИП</title>
+<meta name="description" content="Требования Wildberries, Ozon и Яндекс Маркета к помещению под пункт выдачи: площадь, этаж, вход, камеры. Сколько стоит аренда, какие ошибки съедают бюджет и чек-лист осмотра из 12 пунктов.">
+<style>
+:root{
+  --bg:#0d1420;
+  --bg2:#111a2b;
+  --card:#16203400;
+  --card-bg:#152036;
+  --card-border:#233252;
+  --text:#e8edf7;
+  --muted:#9aa8c4;
+  --accent:#ff8a00;
+  --accent2:#ffa733;
+  --lav:#b9a8ff;
+  --wb:#a855f7;
+  --ozon:#3fa9ff;
+  --ym:#f5c518;
+  --green:#4ade80;
+  --yellow:#facc15;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.7;font-size:17px}
+.wrap{max-width:860px;margin:0 auto;padding:0 20px}
+/* header */
+.header{position:sticky;top:0;z-index:100;background:rgba(13,20,32,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--card-border)}
+.header-in{max-width:1100px;margin:0 auto;padding:14px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:800;color:#fff;text-decoration:none}
+.logo span{color:var(--accent)}
+.header-btn{background:var(--accent);color:#0d1420;font-weight:700;text-decoration:none;padding:10px 22px;border-radius:12px;font-size:15px;white-space:nowrap}
+.header-btn:hover{background:var(--accent2)}
+/* breadcrumbs */
+.crumbs{padding:28px 0 0;font-size:15px}
+.crumbs a{color:var(--lav);text-decoration:none}
+.crumbs a:hover{text-decoration:underline}
+.crumbs span{color:var(--muted)}
+/* hero */
+.hero{padding:34px 0 10px}
+.meta{color:var(--muted);font-size:14px;margin-bottom:14px}
+h1{font-size:clamp(30px,5.5vw,44px);line-height:1.2;font-weight:800;margin-bottom:18px}
+.lead{font-size:19px;color:var(--muted)}
+.lead b{color:var(--text)}
+.accent{color:var(--accent)}
+/* toc */
+.toc{background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:26px 28px;margin:34px 0}
+.toc h2{font-size:18px;margin-bottom:14px}
+.toc ol{margin-left:22px;color:var(--muted)}
+.toc li{margin:8px 0}
+.toc a{color:var(--text);text-decoration:none}
+.toc a:hover{color:var(--accent)}
+/* sections */
+section{padding:28px 0}
+h2{font-size:clamp(24px,3.5vw,32px);font-weight:800;margin-bottom:18px}
+h3{font-size:20px;font-weight:700;margin:26px 0 12px}
+p{margin-bottom:16px}
+a{color:var(--lav)}
+p b,li b{color:#fff}
+/* badges */
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 20px}
+.badge{padding:5px 16px;border-radius:20px;font-size:14px;font-weight:600;border:1.5px solid}
+.b-wb{color:var(--wb);border-color:var(--wb)}
+.b-oz{color:var(--ozon);border-color:var(--ozon)}
+.b-ym{color:var(--ym);border-color:var(--ym)}
+/* table */
+.tbl-wrap{overflow-x:auto;margin:20px 0}
+table{width:100%;border-collapse:collapse;background:var(--card-bg);border-radius:14px;overflow:hidden;font-size:15px;min-width:640px}
+th{background:#1b2a45;color:#fff;text-align:left;padding:13px 14px;font-size:14px}
+td{padding:12px 14px;border-top:1px solid var(--card-border);color:var(--text);vertical-align:top}
+td:first-child{color:var(--muted);font-weight:600;white-space:nowrap}
+/* cards grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:22px 0}
+.card{background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:22px}
+.card .ic{font-size:28px;margin-bottom:10px}
+.card h3{margin:0 0 8px;font-size:17px}
+.card p{margin:0;color:var(--muted);font-size:15px}
+/* number cards */
+.nums{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin:22px 0}
+.num{background:linear-gradient(160deg,#1a2540,#141d31);border:1px solid var(--card-border);border-radius:16px;padding:24px;text-align:center}
+.num .v{font-size:30px;font-weight:800;color:var(--accent)}
+.num .l{color:var(--muted);font-size:14px;margin-top:6px}
+/* tips */
+.tip{border-left:4px solid var(--green);background:rgba(74,222,128,.07);border-radius:0 12px 12px 0;padding:14px 18px;margin:18px 0;font-size:15px}
+.warn{border-left:4px solid var(--yellow);background:rgba(250,204,21,.07);border-radius:0 12px 12px 0;padding:14px 18px;margin:18px 0;font-size:15px}
+.tip b,.warn b{color:#fff}
+/* checklist */
+.check{background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:26px 28px;margin:22px 0}
+.check h3{margin-top:0}
+.check ol{list-style:none;counter-reset:chk}
+.check li{counter-increment:chk;padding:10px 0 10px 44px;position:relative;border-bottom:1px solid var(--card-border)}
+.check li:last-child{border-bottom:none}
+.check li::before{content:counter(chk);position:absolute;left:0;top:9px;width:28px;height:28px;border-radius:8px;border:1.5px solid var(--accent);color:var(--accent);font-weight:700;font-size:14px;display:flex;align-items:center;justify-content:center}
+/* cta */
+.cta{background:linear-gradient(135deg,#ff8a00,#ff5e00);border-radius:20px;padding:36px 30px;text-align:center;margin:36px 0}
+.cta h2{color:#0d1420;margin-bottom:10px}
+.cta p{color:#2b1a05;margin-bottom:22px;font-weight:500}
+.cta-btn{display:inline-block;background:#0d1420;color:#fff;font-weight:700;font-size:18px;padding:16px 40px;border-radius:14px;text-decoration:none}
+.cta-btn:hover{background:#1a2540}
+.cta small{display:block;color:#5a3a10;margin-top:12px;font-size:13px}
+/* sources */
+.src{background:var(--card-bg);border:1px solid var(--card-border);border-radius:16px;padding:24px 28px;margin:30px 0}
+.src h2{font-size:20px}
+.src ul{margin-left:20px}
+.src li{margin:9px 0;font-size:15px;color:var(--muted)}
+.src a{color:var(--lav)}
+/* footer */
+footer{border-top:1px solid var(--card-border);margin-top:40px;padding:30px 0 40px;color:var(--muted);font-size:14px;text-align:center}
+footer a{color:var(--lav)}
+.copy{margin-top:14px;color:#5f6f8f}
+@media(max-width:600px){body{font-size:16px}.header-in{padding:12px 14px}.header-btn{padding:8px 14px;font-size:13px}}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <div class="header-in">
+    <a class="logo" href="index.html">Комплект<span>ИП</span></a>
+    <a class="header-btn" href="index.html#buy">Купить · 1490 ₽</a>
+  </div>
+</header>
+
+<div class="wrap">
+  <div class="crumbs"><a href="index.html">← На главную</a> · <a href="blog.html">Блог</a></div>
+
+  <div class="hero">
+    <div class="meta">Обновлено: ноябрь 2026 · 9 минут чтения</div>
+    <h1>Помещение под ПВЗ: <span class="accent">требования, аренда</span> и чек-лист осмотра</h1>
+    <p class="lead">Требования Wildberries, Ozon и Яндекс Маркета к точке: площадь, этаж, вход, камеры. Сколько стоит аренда, какие <b>запреты</b> чаще всего приводят к отказу и чек-лист из <b>12 пунктов</b> — возьмите его с собой, когда пойдёте смотреть помещение.</p>
+  </div>
+
+  <div class="toc">
+    <h2>Содержание</h2>
+    <ol>
+      <li><a href="#req">Требования маркетплейсов к помещению</a></li>
+      <li><a href="#ban">Из-за чего чаще всего отказывают</a></li>
+      <li><a href="#money">Сколько стоит аренда и запуск</a></li>
+      <li><a href="#check">Чек-лист осмотра: 12 пунктов</a></li>
+      <li><a href="#sources">Источники</a></li>
+    </ol>
+  </div>
+
+  <section id="req">
+    <h2>Требования маркетплейсов к помещению</h2>
+    <p>У каждого маркетплейса свои правила, и они заметно различаются. Wildberries — самый строгий: требует определённую площадь в городах-миллионниках и склад от 30 м². Ozon гибче — есть даже формат «Домашний пункт» на 20–25 м². Яндекс Маркет оценивает точку по чек-листу на 65 баллов.</p>
+    <div class="badges">
+      <span class="badge b-wb">Wildberries</span>
+      <span class="badge b-oz">Ozon</span>
+      <span class="badge b-ym">Яндекс Маркет</span>
+    </div>
+    <div class="tbl-wrap">
+      <table>
+        <tr><th>Параметр</th><th>Wildberries</th><th>Ozon</th><th>Яндекс Маркет</th></tr>
+        <tr><td>Площадь зала</td><td>от 70 м² в миллионниках, от 25–40 м² в небольших городах</td><td>от 20–25 м², есть «Домашний пункт»</td><td>общий зал от 25 м²</td></tr>
+        <tr><td>Этаж</td><td>только первый этаж</td><td>первый этаж или цоколь с отдельным входом</td><td>первый этаж, шаговая доступность</td></tr>
+        <tr><td>Склад / хранение</td><td>отдельное помещение от 30 м²</td><td>зона хранения в помещении</td><td>зона хранения по регламенту</td></tr>
+        <tr><td>Вход</td><td>отдельный, с улицы</td><td>отдельный или в ТЦ</td><td>отдельный, табличка и навигация</td></tr>
+        <tr><td>Видеонаблюдение</td><td>обязательно, запись от 30 дней</td><td>обязательно</td><td>обязательно по чек-листу</td></tr>
+        <tr><td>Интернет</td><td>скорость от 10 Мбит/с</td><td>стабильный канал</td><td>по требованиям регламента</td></tr>
+        <tr><td>Близость других ПВЗ</td><td>радиальный лимит: чужой ПВЗ рядом — отказ</td><td>проверка по карте, есть лимит плотности</td><td>проверка адреса на карте</td></tr>
+      </table>
+    </div>
+    <p>Перед осмотром помещения обязательно проверьте адрес в личном кабинете маркетплейса: если рядом уже работает чужой ПВЗ, заявку отклонят — а вы потеряете время и, возможно, аванс.</p>
+  </section>
+
+  <section id="ban">
+    <h2>Из-за чего чаще всего отказывают</h2>
+    <p>Четыре причины закрывают бо́льшую часть отказов. Проверяйте их до подписания договора аренды:</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🚫</div><h3>Подвал и цоколь без окон</h3><p>Формально «не первый этаж». Исключение — цоколь с отдельным входом у Ozon, но и там нужны согласования.</p></div>
+      <div class="card"><div class="ic">🚪</div><h3>Вход через тамбур нескольких квартир</h3><p>ПВЗ должен быть с уличным входом. Вход «как в подъезде» — почти гарантированный отказ WB.</p></div>
+      <div class="card"><div class="ic">🏪</div><h3>Плохие соседи</h3><p>Рядом бар с шумом до ночи или магазин алкопродуктов — маркетплейс может не одобрить локацию.</p></div>
+      <div class="card"><div class="ic">📍</div><h3>Чужой ПВЗ рядом</h3><p>У всех трёх площадок есть радиальные ограничения. Сначала проверьте адрес в кабинете — потом договаривайтесь об аренде.</p></div>
+    </div>
+    <div class="warn"><b>Важно:</b> аванс и депозит под «обещание открыть ПВЗ» платить до одобрения локации маркетплейсом — риск, который не оправдывается почти никогда.</div>
+  </section>
+
+  <section id="money">
+    <h2>Сколько стоит аренда и запуск</h2>
+    <p>Деньги — главный фильтр, через который стоит пропустить решение об открытии. Ориентиры на 2026 год:</p>
+    <div class="nums">
+      <div class="num"><div class="v">20–120 тыс. ₽</div><div class="l">аренда в месяц, зависит от города и трафика улицы</div></div>
+      <div class="num"><div class="v">50–440 тыс. ₽</div><div class="l">стартовые вложения: ремонт, стеллажи, техника, вывеска</div></div>
+      <div class="num"><div class="v">50 000 ₽</div><div class="l">гарантийный взнос Wildberries</div></div>
+    </div>
+    <p>У Ozon с 1 июня 2026 года действует динамический тариф 3,4–4,9% с оборота плюс программа поддержки точек до 4,5 млн ₽ — учитывайте это в модели доходов. Аренда съедает 30–50% маржи ПВЗ, поэтому торгуйтесь: сезонные скидки, арендные каникулы на первый месяц, скидка за длинный договор.</p>
+    <div class="tip"><b>Совет:</b> торгуйтесь до подписания договора, а не после. Арендодатели в периоде простоя помещений дают 10–20% скидки гораздо охотнее, чем кажется.</div>
+  </section>
+
+  <section id="check">
+    <h2>Чек-лист осмотра: 12 пунктов</h2>
+    <p>Распечатайте или откройте с телефона прямо на просмотрах. Каждый «нет» — повод торговаться или искать дальше.</p>
+    <div class="check">
+      <h3>Помещение и адрес</h3>
+      <ol>
+        <li>Первый этаж (или цоколь с отдельным входом — только для Ozon).</li>
+        <li>Адрес прошёл проверку в личном кабинете маркетплейса — рядом нет чужого ПВЗ.</li>
+        <li>Отдельный вход с улицы, не через тамбур.</li>
+        <li>Есть витрина или возможность поставить вывеску и табличку.</li>
+      </ol>
+      <h3>Техника и коммуникации</h3>
+      <ol start="5">
+        <li>Интернет от 10 Мбит/с — проверьте скорость с телефона на месте.</li>
+        <li>Есть розетки под сканеры, принтер и камеру, состояние проводки в норме.</li>
+        <li>Можно смонтировать видеонаблюдение с записью от 30 дней.</li>
+        <li>Отопление и вентиляция: зимой в зале не холодно, летом не душно.</li>
+      </ol>
+      <h3>Деньги и документы</h3>
+      <ol start="9">
+        <li>Собственник подтверждён: договор аренды подписывает владелец, а не «представитель».</li>
+        <li>Согласование вывески и наружной рекламы прописано в договоре.</li>
+        <li>Аренда: размер, индексация, депозит, срок уведомления о выезде — всё понятно и приемлемо.</li>
+        <li>Соседи не мешают выдаче: нет ночного шума, алкомаркета или стройки в окна.</li>
+      </ol>
+    </div>
+    <div class="tip"><b>Лайфхак:</b> приходите на просмотр дважды — днём и вечером. Утром улица может быть оживлённой, а вечером — мёртвой, и наоборот.</div>
+  </section>
+
+  <section class="cta">
+    <h2>Открываете ПВЗ — оформляйте сотрудников правильно</h2>
+    <p>Готовый комплект для владельцев пунктов выдачи: 6 шаблонов документов + 2 гайда — «Оформление за 3 дня» и «Финансы без рисков».</p>
+    <a class="cta-btn" href="index.html#buy">Получить комплект за 1490 ₽</a>
+    <small>Одна цена, без подписок и доплат · чек прилагается</small>
+  </section>
+
+  <div class="src" id="sources">
+    <h2>Источники</h2>
+    <ul>
+      <li><a href="https://www.banki.ru/news/daytheme/?id=11022646" target="_blank" rel="noopener">Banki.ru — как открыть пункт выдачи заказов</a></li>
+      <li><a href="https://seller.ozon.ru/media/beginners/kak-vybrat-pomeshenie-dlya-pvz/" target="_blank" rel="noopener">Ozon Seller — как выбрать помещение для ПВЗ</a></li>
+      <li><a href="https://kontur.ru/articles/50758-otkryt_punkt_vydachi_zakazov" target="_blank" rel="noopener">Контур — как открыть пункт выдачи заказов</a></li>
+      <li><a href="https://www.unisender.com/ru/blog/kak-otkryt-pvz-wildberries-i-ozon/" target="_blank" rel="noopener">Unisender — как открыть ПВЗ Wildberries и Ozon</a></li>
+      <li><a href="https://brobank.ru/kak-otkryt-pvz-ozon/" target="_blank" rel="noopener">Brobank — как открыть ПВЗ Ozon: требования и вложения</a></li>
+      <li><a href="https://www.insales.ru/blogs/university/kak-otkryt-punkt-vydachi-ozon" target="_blank" rel="noopener">InSales — как открыть пункт выдачи Ozon</a></li>
+      <li><a href="https://www.mtsbank.ru/articles/kak-otkryt-pvz-wildberries/" target="_blank" rel="noopener">МТС Банк — как открыть ПВЗ Wildberries</a></li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <p><a href="blog.html">Блог: как оформить оператора ПВЗ</a></p>
+    <p><b>Комплект ИП:</b> без штрафов и путаницы — готовые шаблоны для оформления сотрудников ПВЗ.</p>
+    <p>Вопросы и поддержка: Telegram <a href="https://t.me/komplekt_ip">@komplekt_ip</a> · почта info.komplekt_ip@mail.ru</p>
+    <p class="copy">© 2026 КомплектИП · ИП Лепёхина Олеся Вячеславовна, ИНН 712805670825. Все права на материалы комплекта защищены.</p>
+  </div>
+</footer>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();
+   for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) {return;}}
+   k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(114339383, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/114339383" style="position:absolute; left:-9999px;" alt=""></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script>
+document.addEventListener('click', function(e) {
+  var btn = e.target.closest('a.btn, a.header-btn, a.card-link, .cta-btn');
+  if (btn && typeof ym === 'function') {
+    ym(114339383, 'reachGoal', 'btn_click');
+  }
+});
+</script>
+</body>
+</html>
