@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Комплект «Открытие ПВЗ с нуля» — 8 документов вместо дорогих ошибок</title>
+<meta name="description" content="Готовый комплект документов для открытия пункта выдачи заказов: чек-лист помещения, договор аренды, разбор соглашения с маркетплейсом, бюджет оборудования, анализ конкуренции, ИП и УСН, налоги и план запуска на 14 дней.">
+<style>
+:root{
+  --bg:#0d0f12; --bg2:#13161b; --card:#191d24; --card2:#1f242d;
+  --orange:#ff7a1a; --orange2:#ff9a3d; --text:#e8eaee; --muted:#9aa3af;
+  --green:#4ade80; --red:#f87171; --gold:#fbbf24; --line:rgba(255,255,255,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Arial,sans-serif;line-height:1.65;overflow-x:hidden}
+body::before{content:'';position:fixed;top:-220px;left:50%;transform:translateX(-50%);width:900px;height:520px;background:radial-gradient(closest-side,rgba(255,122,26,.22),transparent 70%);pointer-events:none;z-index:0}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px;position:relative;z-index:1}
+
+/* HEADER */
+header{position:sticky;top:0;z-index:50;background:rgba(13,15,18,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.3px}
+.logo span{color:var(--orange)}
+.btn{display:inline-block;background:linear-gradient(135deg,var(--orange),#ff5f00);color:#fff;font-weight:700;text-decoration:none;border-radius:12px;padding:13px 26px;font-size:16px;transition:.25s;box-shadow:0 8px 24px rgba(255,122,26,.35);white-space:nowrap}
+.btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(255,122,26,.5)}
+.btn-nav{padding:10px 18px;font-size:14px;border-radius:10px}
+
+/* HERO */
+.hero{padding:80px 0 50px;text-align:center}
+.badge{display:inline-block;background:rgba(255,122,26,.12);border:1px solid rgba(255,122,26,.35);color:var(--orange2);border-radius:100px;padding:6px 18px;font-size:14px;font-weight:600;margin-bottom:22px}
+h1{font-size:clamp(32px,5vw,54px);line-height:1.12;letter-spacing:-1px;font-weight:800;margin-bottom:20px}
+.grad{background:linear-gradient(90deg,var(--orange),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p.lead{max-width:680px;margin:0 auto 30px;font-size:19px;color:var(--muted)}
+.price-row{display:flex;align-items:center;justify-content:center;gap:14px;margin-bottom:28px;flex-wrap:wrap}
+.price{font-size:34px;font-weight:800;color:#fff}
+.old{font-size:20px;color:var(--muted);text-decoration:line-through}
+.save{background:rgba(74,222,128,.12);border:1px solid rgba(74,222,128,.4);color:var(--green);border-radius:100px;padding:5px 14px;font-size:14px;font-weight:700}
+.hero .btn{font-size:18px;padding:16px 38px}
+.stats{display:flex;justify-content:center;gap:0;margin-top:46px;flex-wrap:wrap}
+.stat{padding:0 34px;text-align:center}
+.stat b{display:block;font-size:28px;color:var(--orange2);font-weight:800}
+.stat span{font-size:14px;color:var(--muted)}
+.stat+.stat{border-left:1px solid var(--line)}
+
+/* SECTIONS */
+section{padding:64px 0}
+.kicker{color:var(--orange2);font-weight:700;font-size:14px;text-transform:uppercase;letter-spacing:1.5px;margin-bottom:10px}
+h2{font-size:clamp(26px,3.5vw,36px);font-weight:800;letter-spacing:-.5px;margin-bottom:14px}
+.sub{color:var(--muted);max-width:640px;margin-bottom:36px;font-size:17px}
+
+/* PAIN */
+.pain-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.pain{background:linear-gradient(180deg,rgba(248,113,113,.08),transparent),var(--card);border:1px solid rgba(248,113,113,.18);border-radius:16px;padding:24px}
+.pain b{color:var(--red);display:block;margin-bottom:8px;font-size:17px}
+.pain p{color:var(--muted);font-size:15px}
+
+/* CARDS */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:1020px){.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.stat{padding:0 18px}.stat b{font-size:22px}}
+.card{background:linear-gradient(180deg,var(--card2),var(--card));border:1px solid var(--line);border-radius:18px;padding:24px 22px;display:flex;flex-direction:column;position:relative;overflow:hidden;transition:.3s}
+.card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--orange),transparent);opacity:0;transition:.3s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.45);border-color:rgba(255,122,26,.35)}
+.card:hover::before{opacity:1}
+.card-icon{font-size:30px;margin-bottom:12px}
+.card h3{color:var(--orange2);font-size:18px;font-weight:700;margin-bottom:10px;line-height:1.35}
+.card p{color:var(--muted);font-size:15px;flex:1}
+.btn-card{display:block;text-align:center;background:linear-gradient(135deg,var(--orange),#ff5f00);color:#fff;font-weight:700;text-decoration:none;border-radius:10px;padding:12px 10px;font-size:15px;margin-top:18px;transition:.25s;box-shadow:0 6px 18px rgba(255,122,26,.3)}
+.btn-card:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(255,122,26,.45)}
+
+/* ACCENT BLOCK */
+.accent{background:linear-gradient(135deg,rgba(255,122,26,.1),rgba(251,191,36,.06));border:1px solid rgba(255,122,26,.3);border-radius:18px;padding:28px 30px;margin-top:34px}
+.accent p{font-size:16px}
+.accent b{color:var(--orange2)}
+
+/* CHOICE */
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:10px}
+@media(max-width:720px){.choice{grid-template-columns:1fr}}
+.opt{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}
+.opt.kit{background:linear-gradient(180deg,rgba(255,122,26,.12),var(--card));border-color:rgba(255,122,26,.45);position:relative}
+.opt .tag{position:absolute;top:-12px;right:20px;background:var(--orange);color:#fff;font-size:12px;font-weight:800;border-radius:100px;padding:4px 14px}
+.opt h3{font-size:20px;margin-bottom:8px}
+.opt .p{font-size:30px;font-weight:800;color:var(--orange2);margin-bottom:10px}
+.opt ul{list-style:none;color:var(--muted);font-size:15px;margin-bottom:20px}
+.opt ul li{padding-left:22px;position:relative;margin-bottom:7px}
+.opt ul li::before{content:'✓';position:absolute;left:0;color:var(--green);font-weight:700}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media(max-width:900px){.steps{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:520px){.steps{grid-template-columns:1fr}}
+.step{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px}
+.step .n{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--orange),#ff5f00);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:17px;margin-bottom:14px}
+.step b{display:block;margin-bottom:6px;font-size:16px}
+.step p{color:var(--muted);font-size:14px}
+
+/* TABLE */
+.tablewrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px}
+table{width:100%;border-collapse:collapse;min-width:560px;background:var(--card)}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line);font-size:15px}
+th{background:var(--card2);color:var(--orange2);font-weight:700}
+td:first-child{color:var(--muted)}
+.win{color:var(--green);font-weight:600}
+
+/* TRUTH */
+.truth{background:linear-gradient(180deg,rgba(251,191,36,.07),transparent),var(--card);border:1px solid rgba(251,191,36,.25);border-radius:18px;padding:28px 30px;margin-top:24px}
+.truth b{color:var(--gold)}
+.truth p{color:var(--muted);font-size:15px}
+.notfor{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin-top:20px}
+.notfor .card p{flex:none}
+
+/* FAQ */
+details{background:var(--card);border:1px solid var(--line);border-radius:14px;margin-bottom:12px;overflow:hidden}
+summary{padding:18px 22px;cursor:pointer;font-weight:600;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center}
+summary::after{content:'+';color:var(--orange);font-size:22px;font-weight:300;transition:.25s}
+details[open] summary::after{transform:rotate(45deg)}
+details p{padding:0 22px 18px;color:var(--muted);font-size:15px}
+
+/* FINAL CTA */
+.final{text-align:center;background:linear-gradient(135deg,rgba(255,122,26,.14),rgba(251,191,36,.08));border:1px solid rgba(255,122,26,.4);border-radius:24px;padding:56px 30px}
+.final h2{margin-bottom:12px}
+.final p{color:var(--muted);max-width:560px;margin:0 auto 28px;font-size:17px}
+.final .price-row{margin-bottom:24px}
+
+/* FOOTER */
+footer{border-top:1px solid var(--line);padding:36px 0;color:var(--muted);font-size:13px}
+footer a{color:var(--orange2)}
+.src{margin-top:14px;line-height:1.8}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s ease}
+.reveal.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <div class="logo">ПВЗ<span>·гайд</span></div>
+    <a class="btn btn-nav" href="https://payform.ru/8jd4RKj/" target="_blank" rel="noopener">Получить комплект · 1990 ₽</a>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section class="hero">
+  <div class="badge">Готовый комплект документов · 2026</div>
+  <h1>Откройте ПВЗ <span class="grad">без пробега по граблям</span>, на которые новички тратят десятки тысяч</h1>
+  <p class="lead">Большинство пунктов выдачи закрываются не из-за маркетплейса — а из-за ошибок до открытия: неправильное помещение, дырявый договор аренды, необдуманный бюджет. Этот комплект закрывает все восемь.</p>
+  <div class="price-row"><span class="price">1990 ₽</span><span class="old">2392 ₽</span><span class="save">экономия 402 ₽</span></div>
+  <a class="btn" href="https://payform.ru/8jd4RKj/" target="_blank" rel="noopener">Получить комплект · 1990 ₽</a>
+  <div class="stats">
+    <div class="stat"><b>8</b><span>готовых документов</span></div>
+    <div class="stat"><b>15 000 ₽</b><span>столько берёт юрист за то же</span></div>
+    <div class="stat"><b>14 дней</b><span>от решения до первой посылки</span></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Почему это важно</div>
+  <h2>Три места, где будущие владельцы ПВЗ теряют деньги ещё до открытия</h2>
+  <div class="pain-grid">
+    <div class="pain reveal"><b>💸 Помещение «на слово»</b><p>Договор подписан, залог передан — а акт приёма-передачи не составлен. Когда арендодатель «забывает» вернуть залог, доказать нечего.</p></div>
+    <div class="pain reveal"><b>📍 Перегретая локация</b><p>В радиусе 800 метров уже три ПВЗ, а вы узнаёте об этом после того, как заплатили аренду за месяц вперёд. Проверка занимает 15 минут и стоит ноль.</p></div>
+    <div class="pain reveal"><b>🖥 Бюджет «на глазок»</b><p>Купили терминал за 40 тысяч, а принтер этикеток забыли — он нужен в первый же день. Без таблицы расходов бюджет всегда съезжает.</p></div>
+  </div>
+</section>
+
+<section id="sostav">
+  <div class="kicker">Что внутри</div>
+  <h2>Восемь готовых документов — каждый закрывает конкретную ошибку</h2>
+  <p class="sub">Можно взять любой документ отдельно за 299 ₽ — а можно весь комплект за 1990 ₽ и сэкономить 402 ₽.</p>
+  <div class="grid">
+<div class="card reveal">
+<div class="card-icon">📋</div>
+<h3>Чек-лист осмотра помещения</h3>
+<p>70+ пунктов по требованиям Wildberries, Ozon и Яндекс Маркета: площадь, этаж, вход, камеры, вентиляция, электромощность. Пройдите по списку до подписания аренды — а не после.</p>
+<a class="btn-card" href="https://payform.ru/99d4Ruy/" target="_blank" rel="noopener">Получить · 299 ₽</a>
+</div>
+<div class="card reveal">
+<div class="card-icon">📄</div>
+<h3>Договор аренды + акт приёма-передачи</h3>
+<p>Шаблон с формулировками, которые защищают арендатора: состояние помещения, порядок оплаты, сроки на устранение неисправностей, возврат залога. Акт фиксирует исходное состояние — без него залог не вернуть.</p>
+<a class="btn-card" href="https://payform.ru/crd4Rwr/" target="_blank" rel="noopener">Получить · 299 ₽</a>
+</div>
+<div class="card reveal">
+<div class="card-icon">🤝</div>
+<h3>Соглашение с маркетплейсом — разбор</h3>
+<p>Как подать заявку в WB, Ozon и Яндекс Маркет, какие поля заполнять, и главное — какие формулировки оферты проверить до подписания: комиссии, штрафы, сроки выплат, порядок расторжения.</p>
+<a class="btn-card" href="https://payform.ru/fgd4RxR/" target="_blank" rel="noopener">Получить · 299 ₽</a>
+</div>
+<div class="card reveal">
+<div class="card-icon">🖥</div>
+<h3>Оборудование с бюджетом</h3>
+<p>Полный список: стеллажи, ПК или терминал, принтер этикеток, камеры, счётчик банкнот, расходники. Три сценария бюджета — от эконома до комфорта — и редактируемая Excel-таблица, куда вы вписываете свои цены.</p>
+<a class="btn-card" href="https://payform.ru/i3d4Rzf/" target="_blank" rel="noopener">Получить · 299 ₽</a>
+</div>
+<div class="card reveal">
+<div class="card-icon">📍</div>
+<h3>Анализ конкуренции локации</h3>
+<p>Пошаговая методика проверки точки: сколько ПВЗ конкурентов в радиусе 800–1000 метров на картах всех трёх маркетплейсов, как оценить трафик за 30 минут у входа, правило «1 ПВЗ на 2–3 тысячи жителей» и чек-лист оценки за 15 минут.</p>
+<a class="btn-card" href="https://payform.ru/tod4RFr/" target="_blank" rel="noopener">Получить · 299 ₽</a>
+</div>
+<div class="card reveal">
+<div class="card-icon">📄</div>
+<h3>Заявление на ИП + выбор режима</h3>
+<p>Заполненная форма Р21001 с комментариями, коды ОКВЭД для ПВЗ и объяснение про УСН «Доходы»: почему почти всем открывающимся подходит она и как не переплатить.</p>
+<a class="btn-card" href="https://payform.ru/5sd4RGz/" target="_blank" rel="noopener">Получить · 299 ₽</a>
+</div>
+<div class="card reveal">
+<div class="card-icon">💳</div>
+<h3>Банк, касса и налоги на старте</h3>
+<p>Какой банк выбрать ИП и на что смотреть в тарифах. Нужна ли онлайн-касса ПВЗ, если выручку перечисляет маркетплейс — спорный вопрос с нюансами, разобран по пунктам. Календарь: когда платить первый налог и взносы.</p>
+<a class="btn-card" href="https://payform.ru/3pd4RHK/" target="_blank" rel="noopener">Получить · 299 ₽</a>
+</div>
+<div class="card reveal">
+<div class="card-icon">📅</div>
+<h3>План запуска на 14 дней</h3>
+<p>Календарь по дням: от регистрации ИП и подписания аренды до первой посылки. Видно, что делать сегодня, завтра и на какой день ждать одобрения маркетплейса.</p>
+<a class="btn-card" href="https://payform.ru/5ld4RIK/" target="_blank" rel="noopener">Получить · 299 ₽</a>
+</div>
+  </div>
+  <div class="accent reveal">
+    <p><b>Два материала из этого списка — самые денежные:</b> анализ конкуренции и бюджет оборудования. Ошибка в локации съедает выручку каждый день, а ошибка в бюджете — один раз, но крупно. Полные методики, чек-листы и редактируемые таблицы — только внутри комплекта.</p>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Выбор за вами</div>
+  <h2>Отдельно или комплект?</h2>
+  <div class="choice">
+    <div class="opt reveal">
+      <h3>Один документ</h3>
+      <div class="p">299 ₽</div>
+      <ul>
+        <li>Любой из восьми материалов на выбор</li>
+        <li>Подходит, если нужен конкретный шаг</li>
+        <li>Файлы в Word и Excel приходят на почту</li>
+      </ul>
+      <a class="btn-card" href="#sostav" style="text-decoration:none">Выбрать документ выше ↑</a>
+    </div>
+    <div class="opt kit reveal">
+      <div class="tag">Берут чаще</div>
+      <h3>Комплект целиком</h3>
+      <div class="p">1990 ₽ <span class="old" style="font-size:18px">2392 ₽</span></div>
+      <ul>
+        <li>Все 8 документов — без выбора</li>
+        <li>Экономия 402 ₽ против покупки по одному</li>
+        <li>Материалы связаны: план запуска ссылается на чек-лист и бюджет</li>
+        <li>Обновления комплекта — бесплатно</li>
+      </ul>
+      <a class="btn" href="https://payform.ru/8jd4RKj/" target="_blank" rel="noopener" style="text-align:center">Получить комплект · 1990 ₽</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Процесс</div>
+  <h2>Как это работает</h2>
+  <div class="steps">
+    <div class="step reveal"><div class="n">1</div><b>Оплата</b><p>Выбираете документ или комплект — оплата занимает пару минут.</p></div>
+    <div class="step reveal"><div class="n">2</div><b>Файлы на почте</b><p>Сразу после оплаты приходят файлы в Word и Excel.</p></div>
+    <div class="step reveal"><div class="n">3</div><b>Подставляете своё</b><p>Вписываете свои цены, город и условия аренды — шаблоны уже готовы.</p></div>
+    <div class="step reveal"><div class="n">4</div><b>Запуск по плану</b><p>Идёте по календарю на 14 дней — от ИП до первой посылки.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Арифметика</div>
+  <h2>Комплект или юрист за 15 000 ₽?</h2>
+  <div class="tablewrap reveal">
+    <table>
+      <tr><th></th><th>Сам, по статьям</th><th>Юрист</th><th>Комплект</th></tr>
+      <tr><td>Стоимость</td><td>0 ₽ — но ошибка стоит дороже</td><td>~15 000 ₽</td><td class="win">1990 ₽</td></tr>
+      <tr><td>Скорость</td><td>недели на сбор по кускам</td><td>1–2 недели</td><td class="win">сразу после оплаты</td></tr>
+      <tr><td>Специализация под ПВЗ</td><td>статьи смешаны с чужим опытом</td><td>часто без специфики маркетплейсов</td><td class="win">заточено под WB, Ozon, ЯМ</td></tr>
+      <tr><td>Редактируемые таблицы и шаблоны</td><td>нет</td><td>иногда</td><td class="win">да, в Word и Excel</td></tr>
+    </table>
+  </div>
+  <div class="truth reveal">
+    <p><b>Неудобная правда:</b> комплект не гарантирует одобрения маркетплейса — решения остаются за WB, Ozon и Яндекс Маркетом. Но он убирает те ошибки, на которых обычно и сыплются: дырявый договор, неоценённая конкуренция, съехавший бюджет.</p>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Честно</div>
+  <h2>Кому комплект НЕ подойдёт</h2>
+  <div class="notfor">
+    <div class="pain reveal"><b>Если у вас уже есть действующий ПВЗ</b><p>Материалы собраны для запуска с нуля. Для масштабирования они дают меньше.</p></div>
+    <div class="pain reveal"><b>Если вы ищете «волшебную кнопку»</b><p>Комплект даёт документы и методику. Работать по ним всё равно придётся вам.</p></div>
+    <div class="pain reveal"><b>Если бюджет на старт — 0 ₽</b><p>Даже по эконом-сценарию оборудование и первый месяц аренды потребуют порядка 30–50 тысяч ₽.</p></div>
+  </div>
+</section>
+
+<section>
+  <div class="kicker">Вопросы</div>
+  <h2>FAQ</h2>
+  <details><summary>Файлы в каком формате?</summary><p>Документы — в Word, таблицы — в Excel. Всё открывается бесплатно: Word Online и Excel Online работают прямо в браузере.</p></details>
+  <details><summary>Как быстро придут материалы?</summary><p>Сразу после оплаты — на указанную при оплате почту.</p></details>
+  <details><summary>А если мне нужен только один документ?</summary><p>Берите его отдельно за 299 ₽ — кнопки есть у каждого материала выше. Но если пригодятся два и больше, комплект выгоднее.</p></details>
+  <details><summary>Подходит ли разбор соглашений ко всем трём маркетплейсам?</summary><p>Да, разбор охватывает заявки и оферты Wildberries, Ozon и Яндекс Маркета.</p></details>
+</section>
+
+<section>
+  <div class="final reveal">
+    <h2>Откроетесь с потерями — или без?</h2>
+    <p>Одна пропущенная проверка локации стоит дороже всего комплекта. Возьмите документы, которые обычно покупают за 15 000 ₽ у юриста — за 1990 ₽.</p>
+    <div class="price-row"><span class="price">1990 ₽</span><span class="old">2392 ₽</span><span class="save">экономия 402 ₽</span></div>
+    <a class="btn" href="https://payform.ru/8jd4RKj/" target="_blank" rel="noopener">Получить комплект · 1990 ₽</a>
+  </div>
+</section>
+
+<footer>
+  <p>Материалы носят информационный характер и не являются юридической консультацией. Перед подписанием документов сверяйте актуальные редакции законов.</p>
+  <p class="src"><b>Источники:</b>
+    <a href="https://www.consultant.ru/document/cons_doc_LAW_34941/" target="_blank" rel="noopener">Глава 34 ГК РФ — аренда</a> ·
+    <a href="https://www.consultant.ru/document/cons_doc_LAW_5142/" target="_blank" rel="noopener">Ст. 655 ГК РФ — передача имущества</a> ·
+    <a href="https://www.consultant.ru/document/cons_doc_LAW_86031/" target="_blank" rel="noopener">129-ФЗ — регистрация ИП</a> ·
+    <a href="https://www.consultant.ru/document/cons_doc_LAW_28165/" target="_blank" rel="noopener">НК РФ — УСН</a> ·
+    <a href="https://www.consultant.ru/document/cons_doc_LAW_134113/" target="_blank" rel="noopener">54-ФЗ — онлайн-кассы</a>
+  </p>
+</footer>
+
+</div>
+<script>
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('on');io.unobserve(e.target)}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
