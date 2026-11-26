@@ -3,54 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Калькулятор дохода ПВЗ — сколько зарабатывает пункт выдачи в месяц</title>
-<meta name="description" content="Онлайн-калькулятор дохода пункта выдачи заказов: ставка за заказ, поток, аренда, зарплата оператора. Считайте прибыль и окупаемость ПВЗ за минуту.">
+<title>Сколько зарабатывает ПВЗ в месяц — калькулятор | КомплектИП</title>
+<meta name="description" content="Калькулятор дохода пункта выдачи заказов: ставка, поток, расходы — мгновенный расчёт прибыли и окупаемости. Без регистрации.">
 <style>
 :root{
-  --bg:#0d1524; --bg2:#101b2e; --panel:#141f33; --panel2:#18253c;
-  --line:#233248; --text:#e8edf5; --muted:#8b97ab;
-  --orange:#ff9f2e; --orange2:#ff8a00; --green:#3ddc84; --red:#ff5c6c;
+  --bg:#0c1018; --panel:#141a26; --panel2:#1a2230; --line:rgba(255,255,255,.08);
+  --text:#e8ecf4; --muted:#8b95a7; --orange:#ffa028; --orange2:#ff7a1a;
+  --green:#3ddc88; --red:#ff5c5c;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
-.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+body{background:var(--bg);color:var(--text);font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;line-height:1.6}
+a{color:var(--orange);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
 
 /* header */
-.header{border-bottom:1px solid var(--line);background:rgba(13,21,36,.9);backdrop-filter:blur(8px)}
-.header .wrap{display:flex;justify-content:space-between;align-items:center;padding-top:20px;padding-bottom:20px}
-.logo{font-size:24px;font-weight:800;color:#fff;text-decoration:none;letter-spacing:.2px}
+header{border-bottom:1px solid var(--line);background:rgba(12,16,24,.9);padding:18px 0}
+.head-row{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+.logo{font-size:24px;font-weight:800;letter-spacing:-.5px;color:var(--text)}
 .logo b{color:var(--orange)}
-.logo-sub{font-size:12px;color:var(--muted);letter-spacing:2px;text-transform:uppercase;margin-top:2px}
-.crumbs{margin-top:18px;font-size:15px}
-.crumbs a{color:var(--orange);text-decoration:none;font-weight:600}
-.crumbs a:hover{text-decoration:underline}
-.crumbs .sep{color:var(--muted);margin:0 8px}
-.meta{margin-top:10px;color:var(--muted);font-size:14px}
+.logo-sub{color:var(--muted);font-size:12px;letter-spacing:2px;text-transform:uppercase;margin-left:12px}
+.breadcrumbs{margin-top:22px;font-size:15px}
+.breadcrumbs a{color:var(--orange)}
+.breadcrumbs span{color:var(--muted);margin:0 6px}
+.meta{color:var(--muted);font-size:14px;margin-top:10px}
 
 /* hero */
-.hero{padding:44px 0 10px;text-align:center}
-h1{font-size:clamp(30px,5vw,46px);font-weight:800;line-height:1.2}
-h1 .hl{color:var(--orange)}
-.hero p{color:var(--muted);font-size:17px;max-width:640px;margin:14px auto 0}
+h1{font-size:clamp(30px,4.5vw,44px);font-weight:800;line-height:1.2;margin:28px 0 12px;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--orange)}
+.lead{color:var(--muted);font-size:17px;max-width:640px}
 
-/* calculator */
-.calc{display:grid;grid-template-columns:1.1fr .9fr;gap:24px;margin-top:40px}
-@media(max-width:860px){.calc{grid-template-columns:1fr}}
-.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:28px}
-.panel h2{font-size:14px;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin-bottom:22px}
+/* calc */
+.calc{display:grid;grid-template-columns:1.15fr .85fr;gap:24px;margin:36px 0 8px;align-items:start}
+.panel{background:linear-gradient(160deg,rgba(26,34,48,.6),rgba(20,26,38,.4));border:1px solid var(--line);border-radius:18px;padding:28px}
+.panel h2{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.panel .note{color:var(--muted);font-size:13px;margin-bottom:20px}
 .field{margin-bottom:26px}
 .field-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
 .field label{font-weight:700;font-size:16px}
 .field .val{color:var(--orange);font-weight:800;font-size:17px;white-space:nowrap}
 .hint{color:var(--muted);font-size:13px;margin-top:8px}
-input[type=range]{width:100%;margin-top:12px;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;outline:none;background:#2a3a54}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--orange);cursor:pointer;box-shadow:0 0 0 4px rgba(255,159,46,.18)}
-input[type=range]::-moz-range-thumb{width:22px;height:22px;border:none;border-radius:50%;background:var(--orange);cursor:pointer;box-shadow:0 0 0 4px rgba(255,159,46,.18)}
+input[type=range]{width:100%;margin-top:12px;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;outline:none;background:#2a3242;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;appearance:none;width:22px;height:22px;border-radius:50%;background:var(--orange);border:3px solid #fff3;box-shadow:0 0 0 4px rgba(255,160,40,.18);cursor:pointer}
+input[type=range]::-moz-range-thumb{width:22px;height:22px;border:none;border-radius:50%;background:var(--orange);cursor:pointer;box-shadow:0 0 0 4px rgba(255,160,40,.18)}
 
 /* result */
 .result-side{position:sticky;top:24px;align-self:start}
-.big-result{background:linear-gradient(135deg,rgba(61,220,132,.12),rgba(61,220,132,.02));border:1px solid rgba(61,220,132,.35);border-radius:16px;padding:30px;text-align:center}
-.big-result.negative{background:linear-gradient(135deg,rgba(255,92,108,.12),rgba(255,92,108,.02));border-color:rgba(255,92,108,.35)}
+.big-result{background:linear-gradient(135deg,rgba(61,220,132,.12),rgba(61,220,132,.02));border:1px solid rgba(61,220,132,.35);border-radius:18px;padding:30px 24px;text-align:center}
+.big-result.negative{background:linear-gradient(135deg,rgba(255,92,92,.12),rgba(255,92,92,.02));border-color:rgba(255,92,92,.35)}
 .big-result .sum{font-size:clamp(34px,5vw,52px);font-weight:800;color:var(--green)}
 .big-result.negative .sum{color:var(--red)}
 .big-result .cap{color:var(--muted);letter-spacing:2px;text-transform:uppercase;font-size:13px;margin-top:6px}
@@ -60,7 +60,8 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:none;border-ra
 .tile .lbl{color:var(--muted);font-size:13px;margin-top:4px}
 .tile.wide{grid-column:1/-1}
 .tile .num.green{color:var(--green)}
-.disclaimer{border-left:3px solid var(--orange);padding:12px 16px;color:var(--muted);font-size:13px;border-radius:0 8px 8px 0;background:rgba(255,159,46,.05);margin-top:16px}
+.tile .num.red{color:var(--red)}
+.disclaimer{border-left:3px solid var(--orange);padding:12px 16px;color:var(--muted);font-size:13px;border-radius:0 8px 8px 0;background:rgba(255,160,40,.05);margin-top:16px}
 
 /* info sections */
 .section{padding:56px 0 8px}
@@ -69,160 +70,172 @@ input[type=range]::-moz-range-thumb{width:22px;height:22px;border:none;border-ra
 .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px;margin-top:32px}
 .card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:24px}
 .card .ico{font-size:28px}
-.card h3{font-size:17px;margin-top:10px}
-.card p{color:var(--muted);font-size:14px;margin-top:8px}
-.tips{margin-top:32px;display:grid;gap:14px}
-.tip{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 24px;display:flex;gap:16px;align-items:flex-start}
-.tip .n{min-width:34px;height:34px;border-radius:50%;background:rgba(255,159,46,.14);color:var(--orange);font-weight:800;display:flex;align-items:center;justify-content:center;font-size:15px}
-.tip h3{font-size:16px}
-.tip p{color:var(--muted);font-size:14px;margin-top:4px}
+.card h3{font-size:17px;font-weight:800;margin:10px 0 6px}
+.card p{color:var(--muted);font-size:14px}
+.levers{margin-top:32px;display:grid;gap:14px}
+.lever{display:flex;gap:18px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px 22px;align-items:flex-start}
+.lever .n{flex:0 0 44px;height:44px;border-radius:12px;background:linear-gradient(135deg,var(--orange),var(--orange2));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:18px;color:#1a1005}
+.lever h3{font-size:16px;font-weight:800;margin-bottom:4px}
+.lever p{color:var(--muted);font-size:14px}
 
 /* faq */
-.faq{margin-top:32px}
-details{background:var(--panel);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
-summary{cursor:pointer;padding:18px 22px;font-weight:700;font-size:16px;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.faq{max-width:760px;margin:32px auto 0;display:grid;gap:12px}
+details{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:0}
+summary{list-style:none;cursor:pointer;padding:18px 22px;font-weight:700;font-size:16px;display:flex;justify-content:space-between;align-items:center;gap:12px}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";color:var(--orange);font-size:22px;font-weight:400;flex-shrink:0}
-details[open] summary::after{content:"–"}
-details p{padding:0 22px 18px;color:var(--muted);font-size:15px}
+summary::after{content:'+';color:var(--orange);font-size:22px;font-weight:800;flex:0 0 auto}
+details[open] summary::after{content:'−'}
+details .ans{padding:0 22px 18px;color:var(--muted);font-size:15px}
 
 /* blog cta */
-.blog-cta{text-align:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:40px 28px;margin-top:24px}
-.btn-outline{display:inline-block;margin-top:22px;padding:13px 30px;border:2px solid var(--orange);border-radius:12px;color:var(--orange);font-weight:700;text-decoration:none;font-size:16px;transition:.2s}
-.btn-outline:hover{background:rgba(255,159,46,.1)}
+.blog-cta{text-align:center;padding:64px 0 24px}
+.blog-cta h2{font-size:clamp(24px,3.5vw,32px);font-weight:800}
+.blog-cta p{color:var(--muted);max-width:640px;margin:12px auto 24px}
+.btn-outline{display:inline-block;border:1.5px solid var(--orange);color:var(--orange);font-weight:700;padding:14px 34px;border-radius:12px;font-size:16px;transition:all .2s}
+.btn-outline:hover{background:rgba(255,160,40,.1);text-decoration:none}
 
 /* footer */
-.footer{margin-top:64px;border-top:1px solid var(--line);padding:40px 0 48px;text-align:center;color:var(--muted);font-size:14px}
-.footer .lead{font-size:15px;color:var(--text)}
-.footer .lead b{color:#fff}
-.footer .contacts{margin-top:14px}
-.footer a{color:var(--orange);text-decoration:none;font-weight:600}
-.footer a:hover{text-decoration:underline}
-.footer .legal{margin-top:16px;font-size:13px}
+footer{border-top:1px solid var(--line);margin-top:56px;padding:36px 0 44px;text-align:center;color:var(--muted);font-size:14px}
+footer .f-brand{color:var(--text);font-size:16px;margin-bottom:12px}
+footer a{color:var(--orange)}
+footer .f-copy{margin-top:14px}
+
+@media(max-width:900px){
+  .calc{grid-template-columns:1fr}
+  .result-side{position:static}
+  .logo-sub{display:none}
+}
 </style>
 </head>
 <body>
 
-<header class="header">
+<header>
   <div class="wrap">
-    <div>
-      <a class="logo" href="index.html">Комплект<b>ИП</b></a>
-      <div class="logo-sub">Оснащение пунктов выдачи</div>
+    <div class="head-row">
+      <a class="logo" href="index.html">Комплект<span><b>ИП</b></span></a>
+      <span class="logo-sub">Оснащение пунктов выдачи</span>
     </div>
-  </div>
-  <div class="wrap" style="padding-top:0">
-    <nav class="crumbs"><a href="index.html">← На главную</a><span class="sep">·</span><a href="blog.html">Блог</a></nav>
+    <div class="breadcrumbs"><a href="index.html">← На главную</a><span>·</span><a href="blog.html">Блог</a></div>
     <div class="meta">Обновлено: ноябрь 2026 · онлайн-расчёт</div>
   </div>
 </header>
 
-<section class="hero wrap">
-  <h1>Сколько зарабатывает <span class="hl">ПВЗ в месяц?</span></h1>
-  <p>Двигайте ползунки — расчёт обновится мгновенно. Цифры примерные, но честные: без «маркетингового оптимизма».</p>
-</section>
+<main class="wrap">
 
-<section class="wrap calc">
-  <div class="panel">
-    <h2>Ваши условия</h2>
-    <div class="field">
-      <div class="field-top"><label for="rate">Ставка за один заказ</label><span class="val" id="rateVal">55 ₽</span></div>
-      <input type="range" id="rate" min="30" max="120" step="1" value="55">
-      <div class="hint">Сколько Маркет платит за выдачу одного заказа. Зависит от города и формата точки: в среднем 40–80 ₽.</div>
+  <h1>Сколько зарабатывает <em>ПВЗ в месяц?</em></h1>
+  <p class="lead">Двигайте ползунки — расчёт обновится мгновенно. Цифры примерные, но честные: без «маркетингового оптимизма».</p>
+
+  <div class="calc">
+    <div class="panel">
+      <h2>Ваши условия</h2>
+      <p class="note">Значения уже заполнены типовыми цифрами — подставьте свои.</p>
+
+      <div class="field">
+        <div class="field-top"><label for="rate">Ставка за один заказ</label><span class="val" id="rate-v">55 ₽</span></div>
+        <input type="range" id="rate" min="20" max="120" step="1" value="55">
+        <p class="hint">Сколько Маркет платит за выдачу одного заказа. Зависит от города и формата точки: в среднем 40–80 ₽.</p>
+      </div>
+
+      <div class="field">
+        <div class="field-top"><label for="orders">Заказов в день</label><span class="val" id="orders-v">80</span></div>
+        <input type="range" id="orders" min="10" max="300" step="5" value="80">
+        <p class="hint">Проходной пункт у жилья — 100–250 заказов. Точка «на отшибе» — заметно меньше.</p>
+      </div>
+
+      <div class="field">
+        <div class="field-top"><label for="rent">Аренда помещения, месяц</label><span class="val" id="rent-v">25 000 ₽</span></div>
+        <input type="range" id="rent" min="0" max="120000" step="1000" value="25000">
+      </div>
+
+      <div class="field">
+        <div class="field-top"><label for="salary">Зарплата оператора(ов)</label><span class="val" id="salary-v">30 000 ₽</span></div>
+        <input type="range" id="salary" min="0" max="150000" step="1000" value="30000">
+        <p class="hint">Если работаете сами — поставьте 0, но закладывайте стоимость своего времени.</p>
+      </div>
+
+      <div class="field">
+        <div class="field-top"><label for="other">Прочие расходы (интернет, коммуналка, расходники)</label><span class="val" id="other-v">8 000 ₽</span></div>
+        <input type="range" id="other" min="0" max="50000" step="500" value="8000">
+      </div>
+
+      <div class="field">
+        <div class="field-top"><label for="start">Вложения на старте (ремонт, стойка, вывеска)</label><span class="val" id="start-v">60 000 ₽</span></div>
+        <input type="range" id="start" min="0" max="500000" step="5000" value="60000">
+      </div>
     </div>
-    <div class="field">
-      <div class="field-top"><label for="orders">Заказов в день</label><span class="val" id="ordersVal">80</span></div>
-      <input type="range" id="orders" min="10" max="300" step="5" value="80">
-      <div class="hint">Проходной пункт у жилья — 100–250 заказов. Точка «на отшибе» — заметно меньше.</div>
-    </div>
-    <div class="field">
-      <div class="field-top"><label for="rent">Аренда помещения, месяц</label><span class="val" id="rentVal">25 000 ₽</span></div>
-      <input type="range" id="rent" min="5000" max="120000" step="1000" value="25000">
-    </div>
-    <div class="field">
-      <div class="field-top"><label for="salary">Зарплата оператора(ов)</label><span class="val" id="salaryVal">30 000 ₽</span></div>
-      <input type="range" id="salary" min="0" max="120000" step="1000" value="30000">
-      <div class="hint">Если работаете сами — поставьте 0, но закладывайте стоимость своего времени.</div>
-    </div>
-    <div class="field">
-      <div class="field-top"><label for="other">Прочие расходы (интернет, коммуналка, расходники)</label><span class="val" id="otherVal">8 000 ₽</span></div>
-      <input type="range" id="other" min="0" max="50000" step="500" value="8000">
-    </div>
-    <div class="field" style="margin-bottom:6px">
-      <div class="field-top"><label for="start">Вложения на старте (ремонт, стойка, вывеска)</label><span class="val" id="startVal">60 000 ₽</span></div>
-      <input type="range" id="start" min="0" max="600000" step="5000" value="60000">
+
+    <div class="result-side">
+      <div class="big-result" id="big">
+        <div class="sum" id="profit">— ₽</div>
+        <div class="cap">Прибыль в месяц</div>
+      </div>
+      <div class="tiles">
+        <div class="tile"><div class="num" id="income">—</div><div class="lbl">Доход с заказов / мес</div></div>
+        <div class="tile"><div class="num" id="expenses">—</div><div class="lbl">Расходы / мес</div></div>
+        <div class="tile wide"><div class="num green" id="year">—</div><div class="lbl">В год</div></div>
+        <div class="tile wide"><div class="num" id="payback">—</div><div class="lbl">Окупаемость вложений</div></div>
+      </div>
+      <div class="disclaimer">Расчёт оценочный: не учитывает налоги, штрафы по регламенту и сезонные провалы по заказам.</div>
     </div>
   </div>
 
-  <div class="result-side">
-    <div class="big-result" id="bigResult">
-      <div class="sum" id="profit">— ₽</div>
-      <div class="cap">Прибыль в месяц</div>
+  <section class="section">
+    <h2>Откуда берутся цифры</h2>
+    <p class="sub">Четыре фактора, которые решают, сколько заработает ваша точка.</p>
+    <div class="cards">
+      <div class="card"><div class="ico">📍</div><h3>Локация</h3><p>Пункт у жилых домов и внутри дворов собирает в разы больше заказов, чем точка на отшибе.</p></div>
+      <div class="card"><div class="ico">📦</div><h3>Поток заказов</h3><p>Главный двигатель дохода: ставка фиксированная, а объём выдач зависит от района.</p></div>
+      <div class="card"><div class="ico">🧾</div><h3>Расходы</h3><p>Аренда и зарплата съедают основную часть выручки — их лучше знать до открытия.</p></div>
+      <div class="card"><div class="ico">⚖️</div><h3>Регламент</h3><p>Штрафы за нарушения регламента режут прибыль — работать нужно строго по правилам.</p></div>
     </div>
-    <div class="tiles">
-      <div class="tile"><div class="num" id="income">—</div><div class="lbl">Доход с заказов / мес</div></div>
-      <div class="tile"><div class="num" id="expenses">—</div><div class="lbl">Расходы / мес</div></div>
-      <div class="tile wide"><div class="num" id="year">—</div><div class="lbl">В год</div></div>
-      <div class="tile wide"><div class="num" id="payback">—</div><div class="lbl">Окупаемость вложений</div></div>
+  </section>
+
+  <section class="section">
+    <h2>Как увеличить прибыль точки</h2>
+    <p class="sub">Пять рычагов, которые двигают цифру сильнее всего.</p>
+    <div class="levers">
+      <div class="lever"><div class="n">1</div><div><h3>Локация важнее дешёвой аренды</h3><p>Точка с арендой на 10 000 ₽ дороже, но с потоком +100 заказов в день приносит примерно на 150 000 ₽ выручки больше в месяц. Дешёвая аренда без потока — самая дорогая ошибка.</p></div></div>
+      <div class="lever"><div class="n">2</div><div><h3>Первые две недели — контроль потока</h3><p>Разговаривайте с клиентами, следите за очередями и скоростью выдачи. Негативные отзывы в первые недели бьют по потоку надолго.</p></div></div>
+      <div class="lever"><div class="n">3</div><div><h3>Оптимум по зарплате</h3><p>Смена 12 часов в одиночку — риск ошибок и штрафов. Иногда два оператора по 6 часов дешевле, чем один уставший на полную ставку.</p></div></div>
+      <div class="lever"><div class="n">4</div><div><h3>Считайте цену штрафа</h3><p>Один штраф по регламенту — это минус 3–7 заказов чистой прибыли. Дисциплина по документам окупается напрямую.</p></div></div>
+      <div class="lever"><div class="n">5</div><div><h3>Знайте себестоимость часа</h3><p>Разделите месячные расходы на часы работы — вы поймёте, выгодно ли брать «лишние» смены и дешёвые тарифы за выдачу.</p></div></div>
     </div>
-    <div class="disclaimer">Расчёт оценочный: не учитывает налоги, штрафы по регламенту и сезонные провалы по заказам.</div>
-  </div>
-</section>
+  </section>
 
-<section class="section wrap">
-  <h2>Откуда берутся цифры</h2>
-  <p class="sub">Четыре фактора, которые решают, сколько заработает ваша точка.</p>
-  <div class="cards">
-    <div class="card"><div class="ico">📍</div><h3>Локация</h3><p>Пункт у жилых домов и внутри дворов собирает в разы больше заказов, чем точка на отшибе.</p></div>
-    <div class="card"><div class="ico">📦</div><h3>Поток заказов</h3><p>Главный двигатель дохода: ставка фиксированная, а объём выдач зависит от района.</p></div>
-    <div class="card"><div class="ico">🧾</div><h3>Расходы</h3><p>Аренда и зарплата съедают основную часть выручки — их лучше знать до открытия.</p></div>
-    <div class="card"><div class="ico">⚖️</div><h3>Регламент</h3><p>Штрафы за нарушения регламента режут прибыль — работать нужно строго по правилам.</p></div>
-  </div>
-</section>
+  <section class="section">
+    <h2>Частые вопросы</h2>
+    <div class="faq">
+      <details open><summary>Нужен ли статус ИП, чтобы открыть ПВЗ?</summary><div class="ans">Да, маркетплейсы работают с ИП или самозанятыми (НПД). Оформление занимает несколько дней и делается онлайн. Самозанятость проще на старте, но у неё есть лимит по доходу.</div></details>
+      <details><summary>Какое помещение подходит под пункт выдачи?</summary><div class="ans">Обычно — от 10 до 30 м² в зависимости от формата, с отдельным входом и возможностью хранения. Требования по конкретному маркетплейсу лучше сверять на момент подачи заявки.</div></details>
+      <details><summary>Можно ли совместить ПВЗ с другим бизнесом?</summary><div class="ans">Да, многие точки работают вместе с магазинами, салонами и службами доставки. Главное — не нарушать регламент маркетплейса по зоне выдачи и хранению.</div></details>
+      <details><summary>Сколько занимает запуск с нуля?</summary><div class="ans">Реалистичный срок — от 2 до 6 недель: подача заявки, согласование помещения, ремонт и оснащение, обучение оператора.</div></details>
+      <details><summary>Какие налоги платить?</summary><div class="ans">Самозанятые платят налог на профессиональный доход (4–6%), ИП чаще всего на упрощёнке (6% или 15%). Налоговая нагрузка — одна из статей, которую стоит посчитать до открытия.</div></details>
+      <details><summary>Кто платит за ремонт и вывеску?</summary><div class="ans">Как правило, владелец точки. У маркетплейсов есть свои требования к брендированию — уточняйте их в договоре, чтобы не переделывать за свой счёт.</div></details>
+    </div>
+  </section>
 
-<section class="section wrap">
-  <h2>Как увеличить прибыль точки</h2>
-  <p class="sub">Пять рычагов, которые двигают цифру сильнее всего.</p>
-  <div class="tips">
-    <div class="tip"><div class="n">1</div><div><h3>Локация важнее дешёвой аренды</h3><p>Точка с арендой на 10 000 ₽ дороже, но с потоком +100 заказов в день приносит примерно на 150 000 ₽ выручки больше в месяц. Дешёвая аренда без потока — самая дорогая ошибка.</p></div></div>
-    <div class="tip"><div class="n">2</div><div><h3>Первые две недели — контроль потока</h3><p>Разговаривайте с клиентами, следите за очередями и скоростью выдачи. Негативные отзывы в первые недели бьют по потоку надолго.</p></div></div>
-    <div class="tip"><div class="n">3</div><div><h3>Оптимум по зарплате</h3><p>Смена 12 часов в одиночку — риск ошибок и штрафов. Иногда два оператора по 6 часов дешевле, чем один уставший на полную ставку.</p></div></div>
-    <div class="tip"><div class="n">4</div><div><h3>Считайте цену штрафа</h3><p>Один штраф по регламенту — это минус 3–7 заказов чистой прибыли. Дисциплина по документам окупается напрямую.</p></div></div>
-    <div class="tip"><div class="n">5</div><div><h3>Знайте себестоимость часа</h3><p>Разделите месячные расходы на часы работы — вы поймёте, выгодно ли брать «лишние» смены и дешёвые тарифы за выдачу.</p></div></div>
-  </div>
-</section>
-
-<section class="section wrap">
-  <h2>Частые вопросы</h2>
-  <div class="faq">
-    <details open><summary>Нужен ли статус ИП, чтобы открыть ПВЗ?</summary><p>Да, маркетплейсы работают с ИП или самозанятыми (НПД). Оформление занимает несколько дней и делается онлайн. Самозанятость проще на старте, но у неё есть лимит по доходу.</p></details>
-    <details><summary>Какое помещение подходит под пункт выдачи?</summary><p>Обычно — от 10 до 30 м² в зависимости от формата, с отдельным входом и возможностью хранения. Требования по конкретному маркетплейсу лучше сверять на момент подачи заявки.</p></details>
-    <details><summary>Можно ли совместить ПВЗ с другим бизнесом?</summary><p>Да, многие точки работают вместе с магазинами, салонами и службами доставки. Главное — не нарушать регламент маркетплейса по зоне выдачи и хранению.</p></details>
-    <details><summary>Сколько занимает запуск с нуля?</summary><p>Реалистичный срок — от 2 до 6 недель: подача заявки, согласование помещения, ремонт и оснащение, обучение оператора.</p></details>
-    <details><summary>Какие налоги платить?</summary><p>Самозанятые платят налог на профессиональный доход (4–6%), ИП чаще всего на упрощёнке (6% или 15%). Налоговая нагрузка — одна из статей, которую стоит посчитать до открытия.</p></details>
-    <details><summary>Кто платит за ремонт и вывеску?</summary><p>Как правило, владелец точки. У маркетплейсов есть свои требования к брендированию — уточняйте их в договоре, чтобы не переделывать за свой счёт.</p></details>
-  </div>
-</section>
-
-<section class="section wrap">
-  <div class="blog-cta">
-    <h2 style="font-size:clamp(22px,3vw,28px)">Больше практики — в блоге</h2>
-    <p class="sub" style="margin-top:12px">На этой странице — только экономика. В блоге мы разбираем выбор помещения, штрафы по регламенту, оформление операторов, локацию и запуск под ключ.</p>
+  <section class="blog-cta">
+    <h2>Больше практики — в блоге</h2>
+    <p>На этой странице — только экономика. В блоге мы разбираем выбор помещения, штрафы по регламенту, оформление операторов, локацию и запуск под ключ.</p>
     <a class="btn-outline" href="blog.html">Читать блог →</a>
-  </div>
-</section>
+  </section>
 
-<footer class="footer wrap">
-  <div class="lead"><b>Комплект ИП:</b> без штрафов и путаницы — готовые шаблоны для оформления сотрудников ПВЗ.</div>
-  <div class="contacts">Вопросы и поддержка: Telegram <a href="https://t.me/komplekt_ip">@komplekt_ip</a> · почта <a href="mailto:info.komplekt_ip@mail.ru">info.komplekt_ip@mail.ru</a></div>
-  <div class="legal">© 2026 КомплектИП · ИП Лепёхина Олеся Вячеславна, ИНН 712805670825. Все права на материалы комплекта защищены.</div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="f-brand"><b>Комплект ИП:</b> без штрафов и путаницы — готовые шаблоны для оформления сотрудников ПВЗ.</div>
+    <div>Вопросы и поддержка: Telegram <a href="https://t.me/komplekt_ip">@komplekt_ip</a> · почта <a href="mailto:info.komplekt_ip@mail.ru">info.komplekt_ip@mail.ru</a></div>
+    <div class="f-copy">© 2026 КомплектИП · ИП Лепёхина Олеся Вячеславна, ИНН 712805670825. Все права на материалы комплекта защищены.</div>
+  </div>
 </footer>
 
 <script>
 function fmt(n){return n.toLocaleString('ru-RU');}
-function paint(input){
-  var min=+input.min, max=+input.max, v=+input.value;
-  var pct=((v-min)/(max-min))*100;
-  input.style.background='linear-gradient(to right,#ff9f2e 0%,#ff9f2e '+pct+'%,#2a3a54 '+pct+'%,#2a3a54 100%)';
+function paint(el){
+  var min=+el.min||0, max=+el.max||100, v=+el.value;
+  var p=((v-min)/(max-min))*100;
+  el.style.background='linear-gradient(90deg, var(--orange) '+p+'%, #2a3242 '+p+'%)';
 }
 function calc(){
   var rate=+document.getElementById('rate').value;
@@ -232,33 +245,34 @@ function calc(){
   var other=+document.getElementById('other').value;
   var start=+document.getElementById('start').value;
 
-  document.getElementById('rateVal').textContent=fmt(rate)+' ₽';
-  document.getElementById('ordersVal').textContent=fmt(orders);
-  document.getElementById('rentVal').textContent=fmt(rent)+' ₽';
-  document.getElementById('salaryVal').textContent=fmt(salary)+' ₽';
-  document.getElementById('otherVal').textContent=fmt(other)+' ₽';
-  document.getElementById('startVal').textContent=fmt(start)+' ₽';
+  document.getElementById('rate-v').textContent=fmt(rate)+' ₽';
+  document.getElementById('orders-v').textContent=fmt(orders);
+  document.getElementById('rent-v').textContent=fmt(rent)+' ₽';
+  document.getElementById('salary-v').textContent=fmt(salary)+' ₽';
+  document.getElementById('other-v').textContent=fmt(other)+' ₽';
+  document.getElementById('start-v').textContent=fmt(start)+' ₽';
 
   var income=rate*orders*30.4;
   var expenses=rent+salary+other;
   var profit=income-expenses;
-  var year=profit*12;
 
-  document.getElementById('income').textContent=fmt(Math.round(income))+' ₽';
-  document.getElementById('expenses').textContent=fmt(expenses)+' ₽';
-  document.getElementById('year').textContent=(year>=0?'+':'')+fmt(Math.round(year))+' ₽';
-
-  var big=document.getElementById('bigResult');
+  var big=document.getElementById('big');
   var pEl=document.getElementById('profit');
   var yEl=document.getElementById('year');
+
+  document.getElementById('income').textContent=fmt(Math.round(income))+' ₽';
+  document.getElementById('expenses').textContent=fmt(Math.round(expenses))+' ₽';
+
   if(profit>=0){
     big.classList.remove('negative');
     pEl.textContent='+'+fmt(Math.round(profit))+' ₽';
-    yEl.classList.add('green');
+    yEl.textContent='+'+fmt(Math.round(profit*12))+' ₽';
+    yEl.classList.add('green'); yEl.classList.remove('red');
   }else{
     big.classList.add('negative');
     pEl.textContent=fmt(Math.round(profit))+' ₽';
-    yEl.classList.remove('green');
+    yEl.textContent=fmt(Math.round(profit*12))+' ₽';
+    yEl.classList.remove('green'); yEl.classList.add('red');
   }
 
   var payEl=document.getElementById('payback');
@@ -278,6 +292,5 @@ function calc(){
 });
 calc();
 </script>
-
 </body>
 </html>
